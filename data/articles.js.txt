@@ -1,0 +1,33 @@
+
+// БЛОК: Статьи отдельно - редактируй тут, не лезь в index.html
+// Чтобы добавить статью - добавь объект в массив
+const ARTICLES_DATA = [
+  {
+    id: 1,
+    cat: {ru:"Архитектура Web3",uk:"Архітектура Web3",en:"Web3 Architecture",it:"Architettura Web3",fr:"Architecture Web3",es:"Arquitectura Web3"},
+    title: {ru:"Блокчейн как беспристрастный нотариус",uk:"Блокчейн як неупереджений нотаріус",en:"Blockchain as impartial notary",it:"Blockchain come notaio imparziale",fr:"Blockchain comme notaire impartial",es:"Blockchain como notario imparcial"},
+    short: {ru:"Почему децентрализованные реестры эффективнее...",en:"Why decentralized ledgers are better as reliable arbitration..."},
+    fullKey: "a1_full" // ключ в T для полного текста
+  },
+  {
+    id: 2,
+    cat: {ru:"AI & Разработка",en:"AI & Dev"},
+    title: {ru:"ИИ как архитектурный ускоритель",en:"AI as architecture accelerator"},
+    short: {ru:"Практический опыт интеграции LLM...",en:"Practical LLM integration..."},
+    fullKey: "a2_full"
+  },
+  {
+    id: 3,
+    cat: {ru:"Trading & Автоматизация",en:"Trading & Automation"},
+    title: {ru:"Почему я создал торгового бота",en:"Why I created a trading bot"},
+    short: {ru:"Я сам торгую...",en:"I trade myself..."},
+    fullKey: "a3_full"
+  },
+  {
+    id: 4,
+    cat: {ru:"SaaS / Telegram",en:"SaaS / Telegram"},
+    title: {ru:"Архитектура Telegram-бота регистратора",en:"Telegram registrar bot architecture"},
+    short: {ru:"Как превратить мессенджер в SuperApp...",en:"How to turn messenger into SuperApp..."},
+    fullKey: "a4_full"
+  }
+];
