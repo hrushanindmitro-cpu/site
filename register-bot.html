@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register Bot | Architect.Dev</title>
+<meta id="meta-description" name="description" content="Telegram booking bot for salons">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{dark:'#0F172A'}}}}</script>
+<link rel="alternate" hreflang="ru" href="/register-bot.html?lang=ru">
+<link rel="alternate" hreflang="uk" href="/register-bot.html?lang=uk">
+<link rel="alternate" hreflang="en" href="/register-bot.html?lang=en">
+<link rel="alternate" hreflang="de" href="/register-bot.html?lang=de">
+<link rel="alternate" hreflang="it" href="/register-bot.html?lang=it">
+<link rel="alternate" hreflang="fr" href="/register-bot.html?lang=fr">
+<link rel="alternate" hreflang="es" href="/register-bot.html?lang=es">
+<link rel="alternate" hreflang="x-default" href="/register-bot.html?lang=en">
+<style>.lang-active{background:#1e293b!important}.flag{font-size:18px}.region-active{background:#06b6d4!important;color:#0f172a!important;border-color:#06b6d4!important}</style>
+</head>
+<body class="min-h-screen bg-[#0F172A] text-slate-200">
+
+<header class="sticky top-0 z-50 bg-[#0F172A]/80 backdrop-blur-md border-b border-slate-800">
+<div class="max-w-[1200px] mx-auto px-6 h-[64px] flex items-center justify-between gap-4">
+<a href="index.html" id="logo-link" class="font-bold text-[18px] text-white"><span class="text-cyan-400">&lt;/&gt;</span> Architect.Dev</a>
+<div class="flex items-center gap-3">
+<div id="lang-switcher" class="relative">
+<button id="lang-btn" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-[13px] text-white">
+<span id="lang-current-flag" class="flag">🇷🇺</span><span id="lang-current-name" class="lang-current-name">Русский</span>
+<svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+</button>
+<div id="lang-menu" class="hidden absolute right-0 top-[110%] w-[190px] bg-slate-900 border border-slate-700 rounded-xl shadow-2xl flex-col p-1 z-[60]">
+<button data-lang="ru" aria-label="Русский" title="Русский" class="lang-option flex items-center gap-3 px-4 py-2.5 rounded-lg text-[14px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇷🇺</span><span class="lang-name">Русский</span></button>
+<button data-lang="uk" aria-label="Українська" title="Українська" class="lang-option flex items-center gap-3 px-4 py-2.5 rounded-lg text-[14px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇺🇦</span><span class="lang-name">Українська</span></button>
+<button data-lang="en" aria-label="English" title="English" class="lang-option flex items-center gap-3 px-4 py-2.5 rounded-lg text-[14px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇬🇧</span><span class="lang-name">English</span></button>
+<button data-lang="it" aria-label="Italiano" title="Italiano" class="lang-option flex items-center gap-3 px-4 py-2.5 rounded-lg text-[14px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇮🇹</span><span class="lang-name">Italiano</span></button>
+<button data-lang="fr" aria-label="Français" title="Français" class="lang-option flex items-center gap-3 px-4 py-2.5 rounded-lg text-[14px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇫🇷</span><span class="lang-name">Français</span></button>
+<button data-lang="es" aria-label="Español" title="Español" class="lang-option flex items-center gap-3 px-4 py-2.5 rounded-lg text-[14px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇪🇸</span><span class="lang-name">Español</span></button>
+<button data-lang="de" aria-label="Deutsch" title="Deutsch" class="lang-option flex items-center gap-3 px-4 py-2.5 rounded-lg text-[14px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇩🇪</span><span class="lang-name">Deutsch</span></button>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+<main class="max-w-[1200px] mx-auto px-6">
+
+<section class="py-12 md:py-16">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-[12px] font-medium mb-6" data-i18n="reg_badge">🌍 2 региона: UA • EU</div>
+<h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight"><span data-i18n="reg_title_1">Бот-регистратор для салонов красоты в Telegram</span><br><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500" data-i18n="reg_title_2">вместо или дополнение администратора</span></h1>
+<p class="text-slate-400 max-w-3xl mb-6 text-[15px] leading-relaxed" data-i18n="reg_desc">Полноценный SaaS...</p>
+<p class="text-slate-300 max-w-3xl mb-8 text-[13px]"><b class="text-white" data-i18n="reg_for">Для кого:</b> салоны красоты...</p>
+
+<div class="flex flex-wrap gap-4">
+<a href="https://t.me/DmytroSaasWeb3_bot" target="_blank" class="bg-white text-slate-950 font-bold px-8 py-4 rounded-xl" data-i18n="reg_try">🤖 Попробовать 30 дней free</a>
+<a href="index.html#products" id="back-to-projects" class="border border-slate-700 text-white px-8 py-4 rounded-xl" data-i18n="reg_to_projects">К проектам</a>
+</div>
+</section>
+
+<section class="py-16 border-t border-slate-800/60" id="pricing">
+<h2 class="text-3xl font-bold text-white mb-2 text-center" data-i18n="reg_pricing_title">Тарифы — 2 региона</h2>
+<div class="flex flex-wrap gap-2 mb-8 justify-center" id="region-switcher">
+  <button data-region="ua" class="region-btn region-active border border-slate-700 px-4 py-2 rounded-xl text-sm font-bold" data-i18n="reg_region_ua">🇺🇦 Украина</button>
+  <button data-region="eu" class="region-btn border border-slate-700 px-4 py-2 rounded-xl text-sm font-medium hover:border-slate-500" data-i18n="reg_region_eu">🇪🇺 Європа</button>
+  </div>
+<div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto" id="pricing-grid"></div>
+<p class="text-center text-slate-600 text-[11px] mt-6" data-i18n="reg_pricing_note">* UA — LiqPay, EU — Stripe</p>
+</section>
+
+
+<section class="py-16 border-t border-slate-800/60">
+<h2 class="text-2xl font-bold text-white mb-6" data-i18n="reg_ext_title">Что в боте — расширенное описание</h2>
+<div class="grid md:grid-cols-2 gap-6 text-[13px]">
+<div class="bg-slate-900 border border-slate-800 p-6 rounded-xl">
+<b class="text-white" data-i18n="reg_admin">📦 Кабинет администратора</b>
+<ul class="text-slate-400 list-disc pl-4 mt-3 space-y-1">
+<li data-i18n="reg_admin_b1">Создание салона / сети, добавление администратора</li>
+<li data-i18n="reg_admin_b2">Услуги: название, цена, длительность, Excel загрузка прайса</li>
+<li data-i18n="reg_admin_b3">Мастера: телефон +380, TG ID, права</li>
+<li data-i18n="reg_admin_b4">Календарь, слоты, бронь, отмена за 24ч</li>
+<li data-i18n="reg_admin_b5">Поиск клиента по телефону/ID/имени, черный список</li>
+<li data-i18n="reg_admin_b6">Подарки кодами, QR-код t.me/bot?start=salon_XXX</li>
+<li data-i18n="reg_admin_b7">Архив, admin_settings, подписка 30 дней</li>
+</ul>
+</div>
+<div class="bg-cyan-500/5 border border-cyan-500/20 p-6 rounded-xl">
+<b class="text-white" data-i18n="reg_client">👤 Клиент</b>
+<ul class="text-slate-300 list-disc pl-4 mt-3 space-y-1">
+<li data-i18n="reg_client_b1">Выбор услуги/мастера/времени → запись</li>
+<li data-i18n="reg_client_b2">Подтверждение, напоминание за 24ч и 2ч, отзыв</li>
+<li data-i18n="reg_client_b3">Кабинет: мои записи, профиль</li>
+</ul>
+<div class="mt-6">
+<b class="text-white" data-i18n="reg_prices">💰 Региональные цены:</b>
+<ul class="text-slate-400 mt-2 space-y-1">
+<li>🇺🇦 UA: Start 259₴, Buisness 469₴, PRO 769₴ — LiqPay</li>
+<li>🇪🇺 EU: Start 19€, Buisness 39€, PRO 69€ — Stripe</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="py-12 border-t border-slate-800/60 text-center">
+<a href="https://t.me/DmytroSaasWeb3_bot" target="_blank" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-8 py-4 rounded-xl inline-block" data-i18n="reg_cta">🤖 Запустить бота — 30 дней free</a>
+<p class="text-slate-600 text-[11px] mt-4">2026 Architect.Dev</p>
+</section>
+
+</main>
+
+<script src="./secure-config.js"></script>
+<script src="./locales/ru.js"></script>
+<script src="./locales/uk.js"></script>
+<script src="./locales/en.js"></script>
+<script src="./locales/it.js"></script>
+<script src="./locales/fr.js"></script>
+<script src="./locales/es.js"></script>
+<script src="./locales/de.js"></script>
+
+<script>
+// Register page i18n - uses LOCALES from /locales
+const flags={ru:"🇷🇺",uk:"🇺🇦",en:"🇬🇧",it:"🇮🇹",fr:"🇫🇷",es:"🇪🇸",de:"🇩🇪"};
+const codes={ru:"RU",uk:"UA",en:"EN",it:"IT",fr:"FR",es:"ES",de:"DE"};
+
+function getLangFromURL(){
+  try{
+    const u=new URL(window.location.href);
+    let l=u.searchParams.get('lang');
+    if(l && window.LOCALES[l.toLowerCase()]) return l.toLowerCase();
+  }catch(e){}
+  return null;
+}
+let currentLang=(getLangFromURL()||localStorage.getItem("site_lang")||"ru").toLowerCase();
+if(!window.LOCALES[currentLang]) currentLang="ru";
+
+function applyLang(lang,push=true){
+  lang=(lang||'ru').toLowerCase();
+  if(!window.LOCALES[lang]) lang='ru';
+  currentLang=lang;
+  const d=window.LOCALES[lang];
+  if(!d) return;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const k=el.getAttribute("data-i18n");
+    if(d[k]) el.textContent=d[k];
+  });
+  if(d.title) document.title=d.title;
+  const meta=document.getElementById('meta-description'); if(meta) meta.setAttribute('content',d.desc||meta.content);
+  document.getElementById("lang-current-flag").textContent=flags[lang]||"🌐";
+  document.documentElement.lang=lang;
+  localStorage.setItem("site_lang",lang);
+  if(typeof renderPricing==='function') renderPricing();
+  document.querySelectorAll(".lang-option").forEach(b=>b.classList.toggle("lang-active",b.dataset.lang===lang));
+  // update links
+  document.getElementById('logo-link').href=`index.html?lang=${lang}`;
+  document.getElementById('back-to-projects').href=`index.html?lang=${lang}#products`;
+  if(push){
+    const url=new URL(window.location.href);
+    url.searchParams.set('lang',lang);
+    history.pushState({lang},'',url.toString());
+  }
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+  const langBtn=document.getElementById('lang-btn');
+  const langMenu=document.getElementById('lang-menu');
+  langBtn.addEventListener('click',e=>{e.stopPropagation();langMenu.classList.toggle('hidden');langMenu.classList.toggle('flex');});
+  langMenu.addEventListener('click',e=>{
+    const btn=e.target.closest('.lang-option');
+    if(!btn) return;
+    applyLang(btn.dataset.lang,true);
+    langMenu.classList.add('hidden');langMenu.classList.remove('flex');
+  });
+  document.addEventListener('click',e=>{
+    if(!document.getElementById('lang-switcher').contains(e.target)){langMenu.classList.add('hidden');langMenu.classList.remove('flex');}
+  });
+  applyLang(currentLang,false);
+  renderPricing();
+});
+
+window.addEventListener('popstate',e=>{
+  const l=getLangFromURL()||(e.state&&e.state.lang)||'ru';
+  applyLang(l,false);
+});
+
+// Pricing
+const PRICING = {
+  ua: {label:"🇺🇦 UA — LiqPay",plans:[{name:"Старт",price:"259₴",sub:"/мес",desc:"до 4 мастеров",features:["До 4","Все функции","30 дней free"]},{name:"Бизнес",price:"469₴",sub:"/мес",desc:"5-7 мастеров",features:["До 7","Все","30 дней free"],hit:true},{name:"PRO",price:"769₴",sub:"/мес",desc:"сеть",features:["Без лимита","Сеть","30 дней free"]}]},
+  eu: {label:"🇪🇺 EU — Stripe",plans:[{name:"Start",price:"19€",sub:"/mo",desc:"up to 4",features:["Up to 4","All","30 days free"]},{name:"Business",price:"39€",sub:"/mo",desc:"5-7",features:["Up to 7","Hit","30 days free"],hit:true},{name:"PRO",price:"69€",sub:"/mo",desc:"network",features:["Unlimited","Network","30 days free"]}]}
+};
+let currentRegion="ua";
+function getPricingData(){
+  const t = window.LOCALES[currentLang] || window.LOCALES['ru'];
+  return {
+    ua: {label:"🇺🇦 UA — LiqPay",plans:[
+      {name:t.reg_plan_start,price:"259₴",sub:"/мес",desc:t.reg_plan_start_desc,features:[t.reg_feat_4,t.reg_feat_all,t.reg_feat_30]},
+      {name:t.reg_plan_business,price:"469₴",sub:"/мес",desc:t.reg_plan_business_desc,features:[t.reg_feat_7,t.reg_feat_all,t.reg_feat_30],hit:true},
+      {name:t.reg_plan_pro,price:"769₴",sub:"/мес",desc:t.reg_plan_pro_desc,features:[t.reg_feat_unlim,t.reg_feat_network2,t.reg_feat_30]}
+    ]},
+    eu: {label:"🇪🇺 EU — Stripe",plans:[
+      {name:t.reg_plan_start,price:"19€",sub:"/mo",desc:t.reg_plan_start_desc,features:[t.reg_feat_4,t.reg_feat_all,t.reg_feat_30]},
+      {name:t.reg_plan_business,price:"39€",sub:"/mo",desc:t.reg_plan_business_desc,features:[t.reg_feat_7,t.reg_feat_all,t.reg_feat_30],hit:true},
+      {name:t.reg_plan_pro,price:"69€",sub:"/mo",desc:t.reg_plan_pro_desc,features:[t.reg_feat_unlim,t.reg_feat_network,t.reg_feat_30]}
+    ]}
+  };
+}
+
+function renderPricing(){
+  const grid=document.getElementById("pricing-grid");
+  const PRICING=getPricingData();
+  const region=PRICING[currentRegion];
+  const t=window.LOCALES[currentLang];
+  if(!grid) return;
+  grid.innerHTML=region.plans.map(p=>`<div class="${p.hit?'bg-cyan-500/10 border-2 border-cyan-500/50':'bg-slate-900/50 border border-slate-800'} p-8 rounded-2xl flex flex-col"><div class="text-[10px] text-slate-500 mb-3">${region.label}</div><h3 class="font-bold text-white text-xl mb-1">${p.name}</h3><p class="text-slate-500 text-sm mb-4">${p.desc}</p><div class="text-4xl font-bold text-white mb-6">${p.price}<span class="text-base text-slate-500">${p.sub}</span></div><ul class="text-sm text-slate-400 space-y-2 mb-6 flex-1">${p.features.map(f=>'<li>✓ '+f+'</li>').join('')}</ul><a href="https://t.me/DmytroSaasWeb3_bot" target="_blank" class="${p.hit?'bg-cyan-500 text-slate-950 font-bold':'border border-slate-700 text-white'} py-3 rounded-xl text-center block">${t.reg_choose}</a></div>`).join('');
+}
+document.addEventListener("DOMContentLoaded",()=>{
+  document.querySelectorAll(".region-btn").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      currentRegion=btn.dataset.region;
+      document.querySelectorAll(".region-btn").forEach(b=>b.classList.remove("region-active"));
+      btn.classList.add("region-active");
+      renderPricing();
+    });
+  });
+});
+</script>
+
+</body>
+</html>

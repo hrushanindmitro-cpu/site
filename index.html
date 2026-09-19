@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Developer-Architect | SaaS & Web3 Expert</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{dark:'#0F172A'}}}}</script>
+<link rel="alternate" hreflang="ru" href="/?lang=ru">
+<link rel="alternate" hreflang="uk" href="/?lang=uk">
+<link rel="alternate" hreflang="en" href="/?lang=en">
+<link rel="alternate" hreflang="it" href="/?lang=it">
+<link rel="alternate" hreflang="fr" href="/?lang=fr">
+<link rel="alternate" hreflang="es" href="/?lang=es">
+<link rel="alternate" hreflang="de" href="/?lang=de">
+<link rel="alternate" hreflang="x-default" href="/?lang=en">
+<meta id="meta-description" name="description" content="Разработка масштабируемых SaaS и Web3 решений">
+<style>.lang-active{background:#1e293b!important}.flag{font-size:18px;line-height:1}</style>
+</head>
+<body class="min-h-screen bg-[#0F172A] text-slate-200 selection:bg-cyan-500 selection:text-white">
+
+<header class="sticky top-0 z-50 bg-[#0F172A]/80 backdrop-blur-md border-b border-slate-800">
+<div class="max-w-[1200px] mx-auto px-6 h-[64px] flex items-center justify-between gap-4">
+<div class="font-bold text-[18px] tracking-tight text-white flex items-center gap-2 shrink-0"><span class="text-cyan-400">&lt;/&gt;</span> Architect.Dev</div>
+<nav class="hidden md:flex items-center gap-6 text-[14px] text-slate-400">
+<a href="#products" class="hover:text-white" data-i18n="nav_projects">Проекты</a>
+<a href="#philosophy" class="hover:text-white" data-i18n="nav_approach">Подход</a>
+<a href="#articles" class="hover:text-white" data-i18n="nav_articles">Статьи</a>
+<a href="#stack" class="hover:text-white" data-i18n="nav_stack">Технологии</a>
+</nav>
+<div class="flex items-center gap-3">
+<div id="lang-switcher" class="relative">
+<button id="lang-btn" aria-label="Change language" title="Change language" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-[13px] text-white">
+<span id="lang-current-flag" class="flag">🇷🇺</span><span id="lang-current-name" class="lang-current-name">Русский</span>
+<svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+</button>
+<div id="lang-menu" class="hidden absolute right-0 top-[110%] w-[190px] bg-slate-900 border border-slate-700 rounded-xl shadow-2xl flex-col p-1 z-[60]">
+<button data-lang="ru" aria-label="Русский" title="Русский" class="lang-option flex items-center gap-3 px-4 py-2.5 rounded-lg text-[14px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇷🇺</span><span class="lang-name">Русский</span></button>
+<button data-lang="uk" aria-label="Українська" title="Українська" class="lang-option flex items-center gap-3 px-4 py-2.5 rounded-lg text-[14px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇺🇦</span><span class="lang-name">Українська</span></button>
+<button data-lang="en" aria-label="English" title="English" class="lang-option flex items-center gap-3 px-4 py-2.5 rounded-lg text-[14px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇬🇧</span><span class="lang-name">English</span></button>
+<button data-lang="it" aria-label="Italiano" title="Italiano" class="lang-option flex items-center gap-3 px-4 py-2.5 rounded-lg text-[14px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇮🇹</span><span class="lang-name">Italiano</span></button>
+<button data-lang="fr" aria-label="Français" title="Français" class="lang-option flex items-center gap-3 px-4 py-2.5 rounded-lg text-[14px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇫🇷</span><span class="lang-name">Français</span></button>
+<button data-lang="es" aria-label="Español" title="Español" class="lang-option flex items-center gap-3 px-4 py-2.5 rounded-lg text-[14px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇪🇸</span><span class="lang-name">Español</span></button>
+<button data-lang="de" aria-label="Deutsch" title="Deutsch" class="lang-option flex items-center gap-3 px-4 py-2.5 rounded-lg text-[14px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇩🇪</span><span class="lang-name">Deutsch</span></button>
+</div>
+</div>
+<div id="contact-dropdown-container" class="relative">
+<button id="contact-btn" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-medium px-4 py-2 rounded-lg text-[14px] shadow-lg shadow-cyan-500/20" data-i18n="btn_contact">Связаться</button>
+<div id="contact-menu" class="hidden absolute right-0 top-[120%] w-[220px] bg-slate-900 border border-slate-700 rounded-xl shadow-2xl flex-col overflow-hidden z-50 text-left">
+<a href="https://t.me/" target="_blank" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white border-b border-slate-800/50">Telegram</a>
+<a href="https://instagram.com/" target="_blank" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white border-b border-slate-800/50">Instagram</a>
+<a href="https://facebook.com/" target="_blank" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white border-b border-slate-800/50">Facebook</a>
+<a href="https://github.com/" target="_blank" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white border-b border-slate-800/50">GitHub</a>
+<a href="https://linkedin.com/" target="_blank" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white border-b border-slate-800/50">LinkedIn</a>
+<a href="mailto:" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white">Email</a>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+<main class="max-w-[1200px] mx-auto px-6 pt-20 pb-16">
+<section class="py-12 md:py-20">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-[13px] font-medium mb-6"><span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span> <span data-i18n="badge">Доступен для сложных SaaS & Web3 проектов</span></div>
+<h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6 leading-tight"><span data-i18n="hero_title_1">Разработка масштабируемых SaaS</span><br><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500" data-i18n="hero_title_2">и Web3 решений</span></h1>
+<p class="text-lg md:text-xl text-slate-400 max-w-2xl mb-10 leading-relaxed" data-i18n="hero_desc">Превращаю идеи в работающие IT-продукты. Беру на себя всю техническую часть: от проектирования логики и базы данных до готового релиза.</p>
+<div class="flex flex-wrap gap-4">
+<a href="#products" class="bg-white text-slate-950 font-semibold px-6 py-3 rounded-xl hover:bg-slate-200" data-i18n="btn_view">Смотреть продукты</a>
+<a href="brief.html" id="btn-discuss-link" class="border border-slate-700 hover:border-slate-500 text-white font-semibold px-6 py-3 rounded-xl" data-i18n="btn_discuss">Обсудить задачу</a>
+</div>
+</section>
+
+<section id="products" class="py-20 border-t border-slate-800/80">
+<h2 class="text-2xl md:text-3xl font-bold text-white mb-12" data-i18n="products_title">Реализованные SaaS & Web3 продукты</h2>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl flex flex-col"><div class="text-cyan-400 font-mono text-sm mb-3">SaaS / Telegram Ecosystem</div><h3 class="text-xl font-bold text-white mb-3" data-i18n="p1_title">Telegram-клиент регистрации</h3><p class="text-slate-400 mb-6 leading-relaxed" data-i18n="p1_desc">Высоконагруженная система онбординга и авторизации пользователей прямо в интерфейсе мессенджера с мгновенной синхронизацией базы данных.</p><div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300 mb-6"><span class="bg-slate-800 px-3 py-1 rounded-md">PostgreSQL</span><span class="bg-slate-800 px-3 py-1 rounded-md">LiqPay/Stripe</span><span class="bg-slate-800 px-3 py-1 rounded-md">Python</span><span class="bg-slate-800 px-3 py-1 rounded-md">Node.js</span><span class="bg-slate-800 px-3 py-1 rounded-md">Telegram API</span></div><a id="btn-registrar" data-i18n="btn_details" href="./register-bot.html" class="mt-auto inline-flex items-center justify-center bg-white text-slate-950 font-semibold px-5 py-2.5 rounded-xl hover:bg-slate-200 transition text-[14px]">Подробнее о боте →</a></div>
+<div class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl flex flex-col">
+<div class="text-cyan-400 font-mono text-sm mb-3" data-i18n="p3_cat">AI / Telegram / LLM</div>
+<h3 class="text-xl font-bold text-white mb-3" data-i18n="p3_title">AI Conversational Agent / LLM-powered Sales Bot</h3>
+<p class="text-slate-400 mb-6 leading-relaxed" data-i18n="p3_desc">ИИ-продавец в Telegram, который консультирует клиентов 24/7, отвечает на вопросы о продукте, отрабатывает возражения, собирает контакты горячих лидов и помогает закрывать сделки на автопилоте.</p>
+<div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300 mb-6">
+<span class="bg-slate-800 px-3 py-1 rounded-md">Python</span><span class="bg-slate-800 px-3 py-1 rounded-md">aiogram 3.x</span><span class="bg-slate-800 px-3 py-1 rounded-md">Google Gemini</span><span class="bg-slate-800 px-3 py-1 rounded-md">SQLite</span><span class="bg-slate-800 px-3 py-1 rounded-md">asyncio</span>
+</div>
+<a href="./sales-bot.html" id="btn-sales-bot" class="mt-auto inline-flex items-center justify-center bg-white text-slate-950 font-semibold px-5 py-2.5 rounded-xl hover:bg-slate-200 transition text-[14px]" data-i18n="p3_btn">Подробнее о боте →</a>
+</div>
+<div class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl"><div class="text-blue-400 font-mono text-sm mb-3">Web3 / AI Analytics</div><h3 class="text-xl font-bold text-white mb-3" data-i18n="p2_title">TradeLens AI</h3><p class="text-slate-400 mb-6 leading-relaxed" data-i18n="p2_desc">Интеллектуальный анализатор торговых паттернов и блокчейн-транзакций. Использует ИИ как архитектурный ускоритель для поиска аномалий.</p><div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300"><span class="bg-slate-800 px-3 py-1 rounded-md">AI Models</span><span class="bg-slate-800 px-3 py-1 rounded-md">Web3</span><span class="bg-slate-800 px-3 py-1 rounded-md">Tailwind</span></div></div>
+</div>
+</section>
+
+<section id="philosophy" class="py-20 border-t border-slate-800/80">
+<h2 class="text-2xl md:text-3xl font-bold text-white mb-12" data-i18n="phil_title">Инженерная философия</h2>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="p-6 bg-slate-900/30 border border-slate-800/60 rounded-xl"><h3 class="text-lg font-bold text-white mb-2" data-i18n="phil1_t">Здравый смысл в разработке</h3><p class="text-slate-400 text-sm leading-relaxed" data-i18n="phil1_d">Смысл важнее лишних функций. Продукт делают не ради кода или технологий. Сначала нужно понять, какую реальную задачу он решает для человека. Если пользы нет, разработка бессмысленна.</p></div>
+<div class="p-6 bg-slate-900/30 border border-slate-800/60 rounded-xl"><h3 class="text-lg font-bold text-white mb-2" data-i18n="phil2_t">Простота вместо громоздких систем</h3><p class="text-slate-400 text-sm leading-relaxed" data-i18n="phil2_d">Не нужно пихать в сервис десятки возможностей «на вырост». Пользователям важны скорость и экономия времени, поэтому лучше сделать одну вещь отлично, чем построить сложный и никому не нужный гигант.</p></div>
+<div class="p-6 bg-slate-900/30 border border-slate-800/60 rounded-xl"><h3 class="text-lg font-bold text-white mb-2" data-i18n="phil3_t">Надежность и скорость</h3><p class="text-slate-400 text-sm leading-relaxed" data-i18n="phil3_d">Сервис должен работать стабильно и быть понятным без инструкций. Чистая логика и крепкий фундамент важнее сиюминутных трендов.</p></div>
+<div class="p-6 bg-slate-900/30 border border-slate-800/60 rounded-xl"><h3 class="text-lg font-bold text-white mb-2" data-i18n="phil4_t">Прямой результат</h3><p class="text-slate-400 text-sm leading-relaxed" data-i18n="phil4_d">Когда всю разработку от идеи до релиза ведет один человек, проект не буксует в бюрократии, а запускается быстрее и с четким пониманием финала.</p></div>
+</div>
+</section>
+
+<section id="articles" class="py-20 border-t border-slate-800/80">
+<h2 class="text-2xl md:text-3xl font-bold text-white mb-12" data-i18n="articles_title">Статьи и заметки</h2>
+<div class="grid md:grid-cols-2 gap-8">
+
+<article class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl flex flex-col justify-between">
+<div><div class="text-cyan-400 font-mono text-sm mb-3" data-i18n="a1_cat">Web3 Architecture</div><h3 class="text-xl font-bold text-white mb-3" data-i18n="a1_title">Блокчейн как беспристрастный нотариус</h3><p class="text-slate-400 mb-6 leading-relaxed" data-i18n="a1_short">Почему децентрализованные реестры эффективнее использовать не для спекуляций, а как математически надежный арбитраж для сложной бизнес-логики предприятий.</p><div id="article-1-details" class="hidden text-slate-300 text-sm space-y-3 mb-6 pt-4 border-t border-slate-800"></div></div>
+<div class="flex items-center justify-between text-xs font-mono text-slate-500 pt-4 border-t border-slate-800/60"><span data-i18n="read_time">Чтение: 5 мин</span><button onclick="toggleArticle(1)" id="btn-1" class="text-cyan-400 hover:text-cyan-300 font-medium" data-i18n="read_more">Читать далее →</button></div>
+</article>
+
+<article class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl flex flex-col justify-between">
+<div><div class="text-blue-400 font-mono text-sm mb-3" data-i18n="a2_cat">AI & Development</div><h3 class="text-xl font-bold text-white mb-3" data-i18n="a2_title">ИИ как архитектурный ускоритель</h3><p class="text-slate-400 mb-6 leading-relaxed" data-i18n="a2_short">Практический опыт интеграции LLM в процесс проектирования SaaS-продуктов: как сократить путь от концепта до готовой кодовой базы без потери контроля над качеством.</p><div id="article-2-details" class="hidden text-slate-300 text-sm space-y-3 mb-6 pt-4 border-t border-slate-800"></div></div>
+<div class="flex items-center justify-between text-xs font-mono text-slate-500 pt-4 border-t border-slate-800/60"><span data-i18n="read_time">Чтение: 5 мин</span><button onclick="toggleArticle(2)" id="btn-2" class="text-cyan-400 hover:text-cyan-300 font-medium" data-i18n="read_more">Читать далее →</button></div>
+</article>
+
+<article class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl flex flex-col justify-between">
+<div><div class="text-cyan-400 font-mono text-sm mb-3" data-i18n="a3_cat">Trading & Automation</div><h3 class="text-xl font-bold text-white mb-3" data-i18n="a3_title">Почему я создал торгового бота: когда эмоции стоят дороже депозита</h3><p class="text-slate-400 mb-6 leading-relaxed" data-i18n="a3_short">Я сам торгую на бирже. И как у любого живого человека, у меня бывали моменты, когда я терял депозит из-за банальных эмоций — усталости, азарта или желания отыграться.</p><div id="article-3-details" class="hidden text-slate-300 text-sm space-y-3 mb-6 pt-4 border-t border-slate-800"></div></div>
+<div class="flex items-center justify-between text-xs font-mono text-slate-500 pt-4 border-t border-slate-800/60"><span data-i18n="read_time">Чтение: 5 мин</span><button onclick="toggleArticle(3)" id="btn-3" class="text-cyan-400 hover:text-cyan-300 font-medium" data-i18n="read_more">Читать далее →</button></div>
+</article>
+
+<article class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl flex flex-col justify-between">
+<div><div class="text-cyan-400 font-mono text-sm mb-3" data-i18n="a4_cat">SaaS / Telegram Architecture</div><h3 class="text-xl font-bold text-white mb-3" data-i18n="a4_title">Архитектура Telegram-бота регистратора</h3><p class="text-slate-400 mb-6 leading-relaxed" data-i18n="a4_short">Как превратить мессенджер в полноценный SuperApp. Разбор онбординга, безопасности и мгновенной синхронизации данных.</p><div id="article-4-details" class="hidden text-slate-300 text-sm space-y-3 mb-6 pt-4 border-t border-slate-800"></div></div>
+<div class="flex items-center justify-between text-xs font-mono text-slate-500 pt-4 border-t border-slate-800/60"><span data-i18n="read_time">Чтение: 5 мин</span><button onclick="toggleArticle(4)" id="btn-4" class="text-cyan-400 hover:text-cyan-300 font-medium" data-i18n="read_more">Читать далее →</button></div>
+</article>
+
+<article class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl flex flex-col justify-between">
+<div><div class="text-cyan-400 font-mono text-sm mb-3" data-i18n="a5_cat">AI / Telegram / LLM</div><h3 class="text-xl font-bold text-white mb-3" data-i18n="a5_title">AI Conversational Agent / LLM-powered Sales Bot</h3><p class="text-slate-400 mb-6 leading-relaxed" data-i18n="a5_short">Как автоматизировать продажи с помощью ИИ-ассистента в Telegram: консультации 24/7, работа с возражениями, сбор горячих лидов и сохранение контекста диалога.</p><div id="article-5-details" class="hidden text-slate-300 text-sm space-y-3 mb-6 pt-4 border-t border-slate-800"></div></div>
+<div class="flex items-center justify-between text-xs font-mono text-slate-500 pt-4 border-t border-slate-800/60"><span data-i18n="read_time">Чтение: 6 мин</span><button onclick="toggleArticle(5)" id="btn-5" class="text-cyan-400 hover:text-cyan-300 font-medium" data-i18n="read_more">Читать далее →</button></div>
+</article>
+
+</div>
+</section>
+
+<section id="stack" class="py-20 border-t border-slate-800/80">
+<h2 class="text-2xl md:text-3xl font-bold text-white mb-8" data-i18n="stack_title">Технологический стек</h2>
+<div class="flex flex-wrap gap-3 font-mono text-sm"><span class="bg-slate-900 border border-slate-800 text-cyan-400 px-4 py-2 rounded-xl">JavaScript / React</span><span class="bg-slate-900 border border-slate-800 text-cyan-400 px-4 py-2 rounded-xl">HTML5</span><span class="bg-slate-900 border border-slate-800 text-cyan-400 px-4 py-2 rounded-xl">Tailwind CSS</span><span class="bg-slate-900 border border-slate-800 text-emerald-400 px-4 py-2 rounded-xl">SQL / Databases</span><span class="bg-slate-900 border border-slate-800 text-sky-400 px-4 py-2 rounded-xl">Docker</span><span class="bg-slate-900 border border-slate-800 text-blue-400 px-4 py-2 rounded-xl">Python</span><span class="bg-slate-900 border border-slate-800 text-blue-400 px-4 py-2 rounded-xl">Node.js</span><span class="bg-slate-900 border border-slate-800 text-blue-400 px-4 py-2 rounded-xl">AI models</span><span class="bg-slate-900 border border-slate-800 text-blue-400 px-4 py-2 rounded-xl">Web3 / Smart Contracts</span></div>
+</section>
+
+<section id="contact" class="py-20 border-t border-slate-800/80 text-center">
+<h2 class="text-2xl md:text-3xl font-bold text-white mb-4" data-i18n="contact_title">Готовы обсудить архитектуру?</h2>
+<p class="text-slate-400 max-w-xl mx-auto mb-8" data-i18n="contact_desc">Давайте превратим сложную задачу в надежное и масштабируемое техническое решение.</p>
+<div id="contact-dropdown-container-bottom" class="relative inline-block">
+<button id="contact-btn-bottom" class="inline-block bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold px-8 py-4 rounded-xl shadow-lg shadow-cyan-500/20" data-i18n="contact_btn">Связаться</button>
+<div id="contact-menu-bottom" class="hidden absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-[220px] bg-slate-900 border border-slate-700 rounded-xl shadow-2xl flex-col overflow-hidden z-50 text-left">
+<a href="https://t.me/" target="_blank" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white border-b border-slate-800/50">Telegram</a>
+<a href="https://instagram.com/" target="_blank" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white border-b border-slate-800/50">Instagram</a>
+<a href="https://facebook.com/" target="_blank" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white border-b border-slate-800/50">Facebook</a>
+<a href="https://github.com/" target="_blank" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white border-b border-slate-800/50">GitHub</a>
+<a href="https://linkedin.com/" target="_blank" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white border-b border-slate-800/50">LinkedIn</a>
+<a href="mailto:" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white">Email</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="border-t border-slate-800 py-8 text-center text-sm text-slate-500"><p>&copy; 2026 Indie Architect & Developer. <span data-i18n="footer">Все права защищены.</span></p></footer>
+
+
+<!-- DICTIONARIES: all translations in /locales, not in page -->
+<script src="./secure-config.js"></script>
+<script src="./locales/ru.js"></script>
+<script src="./locales/uk.js"></script>
+<script src="./locales/en.js"></script>
+<script src="./locales/it.js"></script>
+<script src="./locales/fr.js"></script>
+<script src="./locales/es.js"></script>
+<script src="./locales/de.js"></script>
+<script src="./js/i18n.js"></script>
+<script src="./js/app.js"></script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const link=document.getElementById('btn-discuss-link');
+  if(link){
+    link.addEventListener('click',(e)=>{
+      e.preventDefault();
+      const lang = localStorage.getItem('site_lang') || 'en';
+      window.location.href = `brief.html?lang=${lang}`;
+    });
+  }
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const reg=document.getElementById('btn-registrar');
+  if(reg){
+    const lang = localStorage.getItem('site_lang') || new URLSearchParams(window.location.search).get('lang') || 'en';
+    reg.addEventListener('click',(e)=>{
+      e.preventDefault();
+      window.location.href = `register-bot.html?lang=${lang}`;
+    });
+  }
+});
+</script>
+
+</body>
+
+</html>
