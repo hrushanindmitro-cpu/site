@@ -43,6 +43,14 @@ function updateLinks(lang){
       scanBtn.href=url.pathname+url.search;
     }catch(e){ scanBtn.href=`scanqr-dine.html?lang=${lang}`; }
   }
+  const hrBtn=document.getElementById('btn-hrdocflow');
+  if(hrBtn){
+    try{
+      const url=new URL(hrBtn.href, window.location.origin);
+      url.searchParams.set('lang',lang);
+      hrBtn.href=url.pathname+url.search;
+    }catch(e){ hrBtn.href=`hr-docflow-local.html?lang=${lang}`; }
+  }
 }
 
 function applyLang(lang,push=true){
@@ -57,7 +65,7 @@ function applyLang(lang,push=true){
     if(k==='p3_full'){ if(d[k]) el.innerHTML=d[k]; return; }
     if(d[k]) el.textContent=d[k];
   });
-  [1,2,3,4,5].forEach(id=>{
+  [1,2,3,4,5,6].forEach(id=>{
     const el=document.getElementById(`article-${id}-details`);
     if(el&&d[`a${id}_full`]) el.innerHTML=d[`a${id}_full`];
   });
@@ -69,7 +77,7 @@ function applyLang(lang,push=true){
   localStorage.setItem("site_lang",lang);
   updateLinks(lang);
   document.querySelectorAll(".lang-option").forEach(b=>b.classList.toggle("lang-active",b.dataset.lang===lang));
-  [1,2,3,4,5].forEach(id=>{
+  [1,2,3,4,5,6].forEach(id=>{
     const det=document.getElementById(`article-${id}-details`);
     const btn=document.getElementById(`btn-${id}`);
     if(!det||!btn) return;
