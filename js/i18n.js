@@ -2,7 +2,6 @@
 // js/i18n.js - uses LOCALES from /locales/*.js
 window.LOCALES = window.LOCALES || {};
 const flags={ru:"🇷🇺",uk:"🇺🇦",en:"🇬🇧",it:"🇮🇹",fr:"🇫🇷",es:"🇪🇸",de:"🇩🇪"};
-const langNames={ru:"Русский",uk:"Українська",en:"English",it:"Italiano",fr:"Français",es:"Español",de:"Deutsch"};
 const codes={ru:"RU",uk:"UA",en:"EN",it:"IT",fr:"FR",es:"ES",de:"DE"};
 
 function getLangFromURL(){
@@ -28,10 +27,6 @@ function updateLinks(lang){
       a.href=url.pathname+url.search;
     }catch(e){ a.href=`brief.html?lang=${lang}`; }
   });
-  const salesBtn=document.getElementById('btn-sales-bot');
-  if(salesBtn){
-    try{ const url=new URL(salesBtn.href, window.location.origin); url.searchParams.set('lang',lang); salesBtn.href=url.pathname+url.search; }catch(e){ salesBtn.href=`sales-bot.html?lang=${lang}`; }
-  }
   const regBtn=document.getElementById('btn-registrar');
   if(regBtn){
     try{
@@ -39,6 +34,14 @@ function updateLinks(lang){
       url.searchParams.set('lang',lang);
       regBtn.href=url.pathname+url.search;
     }catch(e){ regBtn.href=`register-bot.html?lang=${lang}`; }
+  }
+  const scanBtn=document.getElementById('btn-scanqr');
+  if(scanBtn){
+    try{
+      const url=new URL(scanBtn.href, window.location.origin);
+      url.searchParams.set('lang',lang);
+      scanBtn.href=url.pathname+url.search;
+    }catch(e){ scanBtn.href=`scanqr-dine.html?lang=${lang}`; }
   }
 }
 
@@ -51,6 +54,7 @@ function applyLang(lang,push=true){
   document.querySelectorAll("[data-i18n]").forEach(el=>{
     const k=el.getAttribute("data-i18n");
     if(k.endsWith('_full')) return;
+    if(k==='p3_full'){ if(d[k]) el.innerHTML=d[k]; return; }
     if(d[k]) el.textContent=d[k];
   });
   [1,2,3,4,5].forEach(id=>{
@@ -59,10 +63,8 @@ function applyLang(lang,push=true){
   });
   if(d.title) document.title=d.title;
   const meta=document.getElementById('meta-description'); if(meta&&d.desc) meta.setAttribute('content',d.desc);
-  const currentFlag=document.getElementById("lang-current-flag");
-  if(currentFlag) currentFlag.textContent=flags[lang]||"🌐";
-  const currentName=document.getElementById("lang-current-name");
-  if(currentName) currentName.textContent=langNames[lang]||lang;
+  document.getElementById("lang-current-flag").textContent=flags[lang]||"🌐";
+  document.getElementById("lang-current-code").textContent=codes[lang]||lang.toUpperCase();
   document.documentElement.lang=lang;
   localStorage.setItem("site_lang",lang);
   updateLinks(lang);

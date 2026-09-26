@@ -576,5 +576,4 @@ const T = {
 };
 
 const brief_flags = {ru:"🇷🇺",uk:"🇺🇦",en:"🇬🇧",it:"🇮🇹",fr:"🇫🇷",es:"🇪🇸",de:"🇩🇪"};
-const brief_langNames = {ru:"Русский",uk:"Українська",en:"English",it:"Italiano",fr:"Français",es:"Español",de:"Deutsch"};
 const brief_codes = {ru:"RU",uk:"UA",en:"EN",it:"IT",fr:"FR",es:"ES",de:"DE"};
