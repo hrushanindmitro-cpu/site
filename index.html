@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Developer-Architect | SaaS & Web3 Expert</title>
+<title data-i18n="title">Developer-Architect | SaaS & Web3 Expert</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config={theme:{extend:{colors:{dark:'#0F172A'}}}}</script>
 <link rel="alternate" hreflang="ru" href="/?lang=ru">
@@ -30,18 +30,18 @@
 </nav>
 <div class="flex items-center gap-3">
 <div id="lang-switcher" class="relative">
-<button id="lang-btn" aria-label="Change language" title="Change language" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-[13px] text-white">
-<span id="lang-current-flag" class="flag">🇷🇺</span><span id="lang-current-name" class="lang-current-name">Русский</span>
+<button id="lang-btn" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-[13px] text-white">
+<span id="lang-current-flag" class="flag">🇷🇺</span><span id="lang-current-code" class="hidden sm:inline font-medium">RU</span>
 <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
 </button>
-<div id="lang-menu" class="hidden absolute right-0 top-[110%] w-[190px] bg-slate-900 border border-slate-700 rounded-xl shadow-2xl flex-col p-1 z-[60]">
-<button data-lang="ru" aria-label="Русский" title="Русский" class="lang-option flex items-center gap-3 px-4 py-2.5 rounded-lg text-[14px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇷🇺</span><span class="lang-name">Русский</span></button>
-<button data-lang="uk" aria-label="Українська" title="Українська" class="lang-option flex items-center gap-3 px-4 py-2.5 rounded-lg text-[14px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇺🇦</span><span class="lang-name">Українська</span></button>
-<button data-lang="en" aria-label="English" title="English" class="lang-option flex items-center gap-3 px-4 py-2.5 rounded-lg text-[14px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇬🇧</span><span class="lang-name">English</span></button>
-<button data-lang="it" aria-label="Italiano" title="Italiano" class="lang-option flex items-center gap-3 px-4 py-2.5 rounded-lg text-[14px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇮🇹</span><span class="lang-name">Italiano</span></button>
-<button data-lang="fr" aria-label="Français" title="Français" class="lang-option flex items-center gap-3 px-4 py-2.5 rounded-lg text-[14px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇫🇷</span><span class="lang-name">Français</span></button>
-<button data-lang="es" aria-label="Español" title="Español" class="lang-option flex items-center gap-3 px-4 py-2.5 rounded-lg text-[14px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇪🇸</span><span class="lang-name">Español</span></button>
-<button data-lang="de" aria-label="Deutsch" title="Deutsch" class="lang-option flex items-center gap-3 px-4 py-2.5 rounded-lg text-[14px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇩🇪</span><span class="lang-name">Deutsch</span></button>
+<div id="lang-menu" class="hidden absolute right-0 top-[110%] w-[200px] bg-slate-900 border border-slate-700 rounded-xl shadow-2xl flex-col py-1 z-[60]">
+<button data-lang="ru" class="lang-option flex items-center gap-3 px-4 py-2.5 text-[13px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇷🇺</span> Русский</button>
+<button data-lang="uk" class="lang-option flex items-center gap-3 px-4 py-2.5 text-[13px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇺🇦</span> Українська</button>
+<button data-lang="en" class="lang-option flex items-center gap-3 px-4 py-2.5 text-[13px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇬🇧</span> English</button>
+<button data-lang="it" class="lang-option flex items-center gap-3 px-4 py-2.5 text-[13px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇮🇹</span> Italiano</button>
+<button data-lang="fr" class="lang-option flex items-center gap-3 px-4 py-2.5 text-[13px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇫🇷</span> Français</button>
+<button data-lang="es" class="lang-option flex items-center gap-3 px-4 py-2.5 text-[13px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇪🇸</span> Español</button>
+<button data-lang="de" class="lang-option flex items-center gap-3 px-4 py-2.5 text-[13px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇩🇪</span> Deutsch</button>
 </div>
 </div>
 <div id="contact-dropdown-container" class="relative">
@@ -62,7 +62,7 @@
 <main class="max-w-[1200px] mx-auto px-6 pt-20 pb-16">
 <section class="py-12 md:py-20">
 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-[13px] font-medium mb-6"><span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span> <span data-i18n="badge">Доступен для сложных SaaS & Web3 проектов</span></div>
-<h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6 leading-tight"><span data-i18n="hero_title_1">Разработка масштабируемых SaaS</span><br><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500" data-i18n="hero_title_2">и Web3 решений</span></h1>
+<h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6 leading-tight"><span data-i18n="hero_title_1">Превращаю ваши идеи в работающие интернет-сервисы</span></h1>
 <p class="text-lg md:text-xl text-slate-400 max-w-2xl mb-10 leading-relaxed" data-i18n="hero_desc">Превращаю идеи в работающие IT-продукты. Беру на себя всю техническую часть: от проектирования логики и базы данных до готового релиза.</p>
 <div class="flex flex-wrap gap-4">
 <a href="#products" class="bg-white text-slate-950 font-semibold px-6 py-3 rounded-xl hover:bg-slate-200" data-i18n="btn_view">Смотреть продукты</a>
@@ -73,17 +73,19 @@
 <section id="products" class="py-20 border-t border-slate-800/80">
 <h2 class="text-2xl md:text-3xl font-bold text-white mb-12" data-i18n="products_title">Реализованные SaaS & Web3 продукты</h2>
 <div class="grid md:grid-cols-2 gap-8">
-<div class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl flex flex-col"><div class="text-cyan-400 font-mono text-sm mb-3">SaaS / Telegram Ecosystem</div><h3 class="text-xl font-bold text-white mb-3" data-i18n="p1_title">Telegram-платформа для автоматизции регистраций клиентов</h3><p class="text-slate-400 mb-6 leading-relaxed" data-i18n="p1_desc">Высоконагруженная система онбординга и авторизации пользователей прямо в интерфейсе мессенджера с мгновенной синхронизацией базы данных.</p><div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300 mb-6"><span class="bg-slate-800 px-3 py-1 rounded-md">PostgreSQL</span><span class="bg-slate-800 px-3 py-1 rounded-md">LiqPay/Stripe</span><span class="bg-slate-800 px-3 py-1 rounded-md">Python</span><span class="bg-slate-800 px-3 py-1 rounded-md">Node.js</span><span class="bg-slate-800 px-3 py-1 rounded-md">Telegram API</span></div><a id="btn-registrar" data-i18n="btn_details" href="./register-bot.html" class="mt-auto inline-flex items-center justify-center bg-white text-slate-950 font-semibold px-5 py-2.5 rounded-xl hover:bg-slate-200 transition text-[14px]">Подробнее о боте →</a></div>
-<div class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl flex flex-col">
-<div class="text-cyan-400 font-mono text-sm mb-3" data-i18n="p3_cat">AI / Telegram / LLM</div>
-<h3 class="text-xl font-bold text-white mb-3" data-i18n="p3_title">AI Conversational Agent / LLM-powered Sales Bot</h3>
-<p class="text-slate-400 mb-6 leading-relaxed" data-i18n="p3_desc">ИИ-продавец в Telegram, который консультирует клиентов 24/7, отвечает на вопросы о продукте, отрабатывает возражения, собирает контакты горячих лидов и помогает закрывать сделки на автопилоте.</p>
-<div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300 mb-6">
-<span class="bg-slate-800 px-3 py-1 rounded-md">Python</span><span class="bg-slate-800 px-3 py-1 rounded-md">aiogram 3.x</span><span class="bg-slate-800 px-3 py-1 rounded-md">Google Gemini</span><span class="bg-slate-800 px-3 py-1 rounded-md">SQLite</span><span class="bg-slate-800 px-3 py-1 rounded-md">asyncio</span>
+<div class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl flex flex-col"><div class="text-cyan-400 font-mono text-sm mb-3">SaaS / Telegram Ecosystem</div><h3 class="text-xl font-bold text-white mb-3" data-i18n="p1_title">Telegram-клиент регистрации</h3><p class="text-slate-400 mb-6 leading-relaxed" data-i18n="p1_desc">Высоконагруженная система онбординга и авторизации пользователей прямо в интерфейсе мессенджера с мгновенной синхронизацией базы данных.</p><div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300 mb-6"><span class="bg-slate-800 px-3 py-1 rounded-md">PostgreSQL</span><span class="bg-slate-800 px-3 py-1 rounded-md">LiqPay/Stripe</span><span class="bg-slate-800 px-3 py-1 rounded-md">Python</span><span class="bg-slate-800 px-3 py-1 rounded-md">Node.js</span><span class="bg-slate-800 px-3 py-1 rounded-md">Telegram API</span></div><a id="btn-registrar" data-i18n="btn_details" href="./register-bot.html" class="mt-auto inline-flex items-center justify-center bg-white text-slate-950 font-semibold px-5 py-2.5 rounded-xl hover:bg-slate-200 transition text-[14px]">Подробнее о боте →</a></div>
+<div class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl"><div class="text-blue-400 font-mono text-sm mb-3">Web3 / AI Analytics</div><h3 class="text-xl font-bold text-white mb-3" data-i18n="p2_title">TradeLens AI</h3><p class="text-slate-400 mb-6 leading-relaxed" data-i18n="p2_desc">Интеллектуальный анализатор торговых паттернов и блокчейн-транзакций. Использует ИИ как архитектурный ускоритель для поиска аномалий.</p><div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300"><span class="bg-slate-800 px-3 py-1 rounded-md">AI Models</span><span class="bg-slate-800 px-3 py-1 rounded-md">Web3</span><span class="bg-slate-800 px-3 py-1 rounded-md">Tailwind</span></div></div><div class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl flex flex-col justify-between">
+<div>
+<div class="text-emerald-400 font-mono text-sm mb-3">SaaS / Restaurant Tech</div>
+<h3 class="text-xl font-bold text-white mb-3" data-i18n="p3_title">ScanQR&amp;Dine</h3>
+<p class="text-slate-400 mb-6 leading-relaxed" data-i18n="p3_desc">Облачная SaaS-платформа умного цифрового меню для ресторанов, баров и кафе.</p>
+<div id="article-5-details" class="hidden text-slate-300 text-sm space-y-3 mb-6 pt-4 border-t border-slate-800" data-i18n="p3_full"></div>
 </div>
-<a href="./sales-bot.html" id="btn-sales-bot" class="mt-auto inline-flex items-center justify-center bg-white text-slate-950 font-semibold px-5 py-2.5 rounded-xl hover:bg-slate-200 transition text-[14px]" data-i18n="p3_btn">Подробнее о боте →</a>
+<div class="flex items-center justify-between gap-4 text-xs font-mono text-slate-500 pt-4 border-t border-slate-800/60">
+<button onclick="toggleArticle(5)" id="btn-5" class="text-cyan-400 hover:text-cyan-300 font-medium whitespace-nowrap" data-i18n="read_more">Читать далее →</button>
+<a id="btn-scanqr" data-i18n="p3_details" href="./scanqr-dine.html" class="inline-flex items-center justify-center bg-white text-slate-950 font-semibold px-5 py-2.5 rounded-xl hover:bg-slate-200 transition text-[14px]">Подробнее о платформе</a>
 </div>
-<div class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl"><div class="text-blue-400 font-mono text-sm mb-3">Web3 / AI Analytics</div><h3 class="text-xl font-bold text-white mb-3" data-i18n="p2_title">TradeLens AI</h3><p class="text-slate-400 mb-6 leading-relaxed" data-i18n="p2_desc">Интеллектуальный анализатор торговых паттернов и блокчейн-транзакций. Использует ИИ как архитектурный ускоритель для поиска аномалий.</p><div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300"><span class="bg-slate-800 px-3 py-1 rounded-md">AI Models</span><span class="bg-slate-800 px-3 py-1 rounded-md">Web3</span><span class="bg-slate-800 px-3 py-1 rounded-md">Tailwind</span></div></div>
+</div>
 </div>
 </section>
 
@@ -119,11 +121,6 @@
 <article class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl flex flex-col justify-between">
 <div><div class="text-cyan-400 font-mono text-sm mb-3" data-i18n="a4_cat">SaaS / Telegram Architecture</div><h3 class="text-xl font-bold text-white mb-3" data-i18n="a4_title">Архитектура Telegram-бота регистратора</h3><p class="text-slate-400 mb-6 leading-relaxed" data-i18n="a4_short">Как превратить мессенджер в полноценный SuperApp. Разбор онбординга, безопасности и мгновенной синхронизации данных.</p><div id="article-4-details" class="hidden text-slate-300 text-sm space-y-3 mb-6 pt-4 border-t border-slate-800"></div></div>
 <div class="flex items-center justify-between text-xs font-mono text-slate-500 pt-4 border-t border-slate-800/60"><span data-i18n="read_time">Чтение: 5 мин</span><button onclick="toggleArticle(4)" id="btn-4" class="text-cyan-400 hover:text-cyan-300 font-medium" data-i18n="read_more">Читать далее →</button></div>
-</article>
-
-<article class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl flex flex-col justify-between">
-<div><div class="text-cyan-400 font-mono text-sm mb-3" data-i18n="a5_cat">AI / Telegram / LLM</div><h3 class="text-xl font-bold text-white mb-3" data-i18n="a5_title">AI Conversational Agent / LLM-powered Sales Bot</h3><p class="text-slate-400 mb-6 leading-relaxed" data-i18n="a5_short">Как автоматизировать продажи с помощью ИИ-ассистента в Telegram: консультации 24/7, работа с возражениями, сбор горячих лидов и сохранение контекста диалога.</p><div id="article-5-details" class="hidden text-slate-300 text-sm space-y-3 mb-6 pt-4 border-t border-slate-800"></div></div>
-<div class="flex items-center justify-between text-xs font-mono text-slate-500 pt-4 border-t border-slate-800/60"><span data-i18n="read_time">Чтение: 6 мин</span><button onclick="toggleArticle(5)" id="btn-5" class="text-cyan-400 hover:text-cyan-300 font-medium" data-i18n="read_more">Читать далее →</button></div>
 </article>
 
 </div>
