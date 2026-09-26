@@ -30,11 +30,4 @@ const ARTICLES_DATA = [
     short: {ru:"Как превратить мессенджер в SuperApp...",en:"How to turn messenger into SuperApp..."},
     fullKey: "a4_full"
   }
-  {
-    id: 5,
-    cat: {ru:"AI / Telegram / LLM",uk:"AI / Telegram / LLM",en:"AI / Telegram / LLM",it:"AI / Telegram / LLM",fr:"AI / Telegram / LLM",es:"AI / Telegram / LLM",de:"AI / Telegram / LLM"},
-    title: {ru:"AI Conversational Agent / LLM-powered Sales Bot",uk:"AI Conversational Agent / LLM-powered Sales Bot",en:"AI Conversational Agent / LLM-powered Sales Bot",it:"AI Conversational Agent / LLM-powered Sales Bot",fr:"AI Conversational Agent / LLM-powered Sales Bot",es:"AI Conversational Agent / LLM-powered Sales Bot",de:"AI Conversational Agent / LLM-powered Sales Bot"},
-    short: {ru:"Как автоматизировать продажи с помощью ИИ-ассистента в Telegram...",uk:"Як автоматизувати продажі за допомогою AI-асистента в Telegram...",en:"How to automate sales with an AI assistant in Telegram...",it:"Come automatizzare le vendite con un assistente AI su Telegram...",fr:"Automatiser les ventes avec un assistant IA sur Telegram...",es:"Cómo automatizar las ventas con un asistente de IA en Telegram...",de:"So automatisieren Sie den Vertrieb mit einem KI-Assistenten in Telegram..."},
-    fullKey: "a5_full"
-  },
 ];
