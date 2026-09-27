@@ -139,7 +139,7 @@ const TRANSLATION_EN = {
   "scan_light": "🟡 Light",
   "scan_light_desc": "For one venue. Full setup: POS integrations, stop-lists, online payments (Stripe, LiqPay), AI sommelier, time-based tips and split orders.",
   "scan_business": "🔴 Business",
-  "scan_business_desc": "For multi-location restaurant groups. Centralized location management, unified analytics, full integrations and payment stack.",,
+  "scan_business_desc": "For multi-location restaurant groups. Centralized location management, unified analytics, full integrations and payment stack.",
   "p2_details": "Learn more about the bot →",
   "trade_title": "Trade AI — AI bot for crypto market analysis",
   "trade_badge": "Web3 / AI Analytics",

@@ -139,7 +139,7 @@ const TRANSLATION_FR = {
   "scan_light": '🟡 Light',
   "scan_light_desc": 'Pour un seul établissement. Intégration caisse, produits indisponibles, paiements en ligne (Stripe, LiqPay), sommelier IA, suggestions selon l’heure et commandes séparées.',
   "scan_business": '🔴 Business',
-  "scan_business_desc": 'Pour les réseaux d’établissements (multisite). Gestion centralisée des points de vente, analyses unifiées et ensemble complet d’intégrations et de paiements.',,
+  "scan_business_desc": 'Pour les réseaux d’établissements (multisite). Gestion centralisée des points de vente, analyses unifiées et ensemble complet d’intégrations et de paiements.',
   "p2_details": "Découvrir le bot →",
   "trade_title": "Trade AI — bot IA pour l'analyse du marché crypto",
   "trade_badge": "Web3 / AI Analytics",

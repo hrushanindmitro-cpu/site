@@ -139,7 +139,7 @@ const TRANSLATION_DE = {
   "scan_light": '🟡 Light',
   "scan_light_desc": 'Für einen Betrieb. Kassenintegration, Ausverkaufslisten, Online-Zahlungen (Stripe, LiqPay), KI-Sommelier, zeitabhängige Empfehlungen und geteilte Bestellungen.',
   "scan_business": '🔴 Business',
-  "scan_business_desc": 'Für Restaurantketten (mehrere Standorte). Zentrale Standortverwaltung, einheitliche Analysen sowie vollständige Integrations- und Zahlungslösungen.',,
+  "scan_business_desc": 'Für Restaurantketten (mehrere Standorte). Zentrale Standortverwaltung, einheitliche Analysen sowie vollständige Integrations- und Zahlungslösungen.',
   "p2_details": "Mehr über den Bot →",
   "trade_title": "Trade AI — KI-Bot zur Analyse des Kryptomarktes",
   "trade_badge": "Web3 / AI Analytics",

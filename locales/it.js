@@ -139,7 +139,7 @@ const TRANSLATION_IT = {
   "scan_light": '🟡 Light',
   "scan_light_desc": 'Per un solo locale. Integrazione con i sistemi di cassa, liste prodotti esauriti, pagamenti online (Stripe, LiqPay), AI sommelier, suggerimenti in base all’orario e ordini separati.',
   "scan_business": '🔴 Business',
-  "scan_business_desc": 'Per reti di locali (multilocation). Gestione centralizzata delle sedi, analisi unificata, suite completa di integrazioni e pagamenti.',,
+  "scan_business_desc": 'Per reti di locali (multilocation). Gestione centralizzata delle sedi, analisi unificata, suite completa di integrazioni e pagamenti.',
   "p2_details": "Scopri il bot →",
   "trade_title": "Trade AI — bot AI per l'analisi del mercato crypto",
   "trade_badge": "Web3 / AI Analytics",
