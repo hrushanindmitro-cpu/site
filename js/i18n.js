@@ -51,6 +51,14 @@ function updateLinks(lang){
       hrBtn.href=url.pathname+url.search;
     }catch(e){ hrBtn.href=`hr-docflow-local.html?lang=${lang}`; }
   }
+  const tradeBtn=document.getElementById('btn-trade-ai');
+  if(tradeBtn){
+    try{
+      const url=new URL(tradeBtn.href, window.location.origin);
+      url.searchParams.set('lang',lang);
+      tradeBtn.href=url.pathname+url.search;
+    }catch(e){ tradeBtn.href=`trade-ai.html?lang=${lang}`; }
+  }
 }
 
 function applyLang(lang,push=true){
