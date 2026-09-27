@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="trade_title">Trade AI — AI-бот для анализа крипторынка</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{dark:'#0F172A'}}}}</script>
+<style>
+.lang-active{background:#1e293b!important}.flag{font-size:18px;line-height:1}
+.glow{box-shadow:0 0 80px rgba(34,211,238,.08)}
+</style>
+</head>
+<body class="min-h-screen bg-[#0F172A] text-slate-200 selection:bg-cyan-500 selection:text-white">
+<header class="sticky top-0 z-50 bg-[#0F172A]/80 backdrop-blur-md border-b border-slate-800">
+<div class="max-w-[1200px] mx-auto px-6 h-[64px] flex items-center justify-between gap-4">
+<a href="./index.html" class="font-bold text-[18px] tracking-tight text-white flex items-center gap-2"><span class="text-cyan-400">&lt;/&gt;</span> Architect.Dev</a>
+<div class="flex items-center gap-3">
+<div id="lang-switcher" class="relative">
+<button id="lang-btn" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-[13px] text-white">
+<span id="lang-current-flag" class="flag">🇷🇺</span><span id="lang-current-code" class="hidden sm:inline font-medium">RU</span>
+<svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+</button>
+<div id="lang-menu" class="hidden absolute right-0 top-[110%] w-[200px] bg-slate-900 border border-slate-700 rounded-xl shadow-2xl flex-col py-1 z-[60]">
+<button data-lang="ru" class="lang-option flex items-center gap-3 px-4 py-2.5 text-[13px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇷🇺</span> Русский</button>
+<button data-lang="uk" class="lang-option flex items-center gap-3 px-4 py-2.5 text-[13px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇺🇦</span> Українська</button>
+<button data-lang="en" class="lang-option flex items-center gap-3 px-4 py-2.5 text-[13px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇬🇧</span> English</button>
+<button data-lang="it" class="lang-option flex items-center gap-3 px-4 py-2.5 text-[13px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇮🇹</span> Italiano</button>
+<button data-lang="fr" class="lang-option flex items-center gap-3 px-4 py-2.5 text-[13px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇫🇷</span> Français</button>
+<button data-lang="es" class="lang-option flex items-center gap-3 px-4 py-2.5 text-[13px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇪🇸</span> Español</button>
+<button data-lang="de" class="lang-option flex items-center gap-3 px-4 py-2.5 text-[13px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇩🇪</span> Deutsch</button>
+</div></div>
+</div></div></header>
+
+<main>
+<section class="max-w-[1200px] mx-auto px-6 pt-20 pb-24 md:pt-28 md:pb-32">
+<div class="max-w-4xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-[13px] font-medium mb-6"><span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span><span data-i18n="trade_badge">Web3 / AI Analytics</span></div>
+<h1 class="text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight mb-6" data-i18n="trade_title">Trade AI — AI-бот для анализа крипторынка</h1>
+<p class="text-lg md:text-xl text-slate-400 leading-relaxed max-w-3xl mb-8" data-i18n="trade_sub">Интеллектуальный Telegram-бот для глубокого анализа рынка. Объединяет технические данные, рыночный контекст и ИИ-синтез на основе математических ожиданий. Не является индивидуальной инвестиционной рекомендацией или гарантией доходности.</p>
+<div class="flex flex-col sm:flex-row gap-3">
+<a href="https://t.me/Dominuscryptobot" target="_blank" rel="noopener" class="inline-flex items-center justify-center bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold px-6 py-3 rounded-xl shadow-lg shadow-cyan-500/20" data-i18n="trade_cta">Открыть бота в Telegram →</a>
+<a href="index.html#products" id="back-to-projects" class="border border-slate-700 text-white px-8 py-4 rounded-xl" data-i18n="reg_to_projects">К проектам</a>
+</div>
+</div>
+<div class="mt-16 grid md:grid-cols-3 gap-4">
+<div class="md:col-span-2 bg-slate-900/60 border border-slate-800 rounded-2xl p-8 glow"><div class="text-cyan-400 font-mono text-xs mb-4">AI + MARKET DATA</div><div class="text-2xl md:text-3xl font-semibold text-white">Technical analysis → Market context → AI synthesis</div><p class="text-slate-500 mt-4 max-w-2xl" data-i18n="trade_lang_note">Интерфейс и аналитические отчёты доступны на русском и английском.</p></div>
+<div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-8"><div class="text-blue-400 font-mono text-xs mb-4">TELEGRAM</div><div class="text-2xl font-semibold text-white">24/7</div><p class="text-slate-400 mt-2">Market analysis inside the messenger.</p></div>
+</div>
+</section>
+
+<section class="border-t border-slate-800/80 py-20">
+<div class="max-w-[1200px] mx-auto px-6">
+<h2 class="text-2xl md:text-3xl font-bold text-white mb-10" data-i18n="trade_features_title">Что умеет бот</h2>
+<div class="grid md:grid-cols-2 gap-6">
+<div class="bg-slate-900/40 border border-slate-800 rounded-2xl p-7"><h3 class="text-xl font-bold text-white mb-3" data-i18n="trade_f1_t">Технический анализ</h3><p class="text-slate-400 leading-relaxed" data-i18n="trade_f1">Рассчитывает волатильность, ATR, EMA, объёмы, уровни поддержки и сопротивления, а также внутридневные торговые диапазоны.</p></div>
+<div class="bg-slate-900/40 border border-slate-800 rounded-2xl p-7"><h3 class="text-xl font-bold text-white mb-3" data-i18n="trade_f2_t">Рыночный контекст</h3><p class="text-slate-400 leading-relaxed" data-i18n="trade_f2">Учитывает ликвидность, funding rate, настроения, опционы, крупные рыночные индикаторы и важные макроэкономические события.</p></div>
+<div class="bg-slate-900/40 border border-slate-800 rounded-2xl p-7"><h3 class="text-xl font-bold text-white mb-3" data-i18n="trade_f3_t">AI-синтез</h3><p class="text-slate-400 leading-relaxed" data-i18n="trade_f3">Объединяет собранные данные с помощью Google Gemini и формирует структурированный аналитический отчёт вместо набора разрозненных показателей.</p></div>
+<div class="bg-slate-900/40 border border-slate-800 rounded-2xl p-7"><h3 class="text-xl font-bold text-white mb-3" data-i18n="trade_f4_t">Всё в Telegram</h3><p class="text-slate-400 leading-relaxed" data-i18n="trade_f4">Выбираете инструмент и запускаете анализ прямо в мессенджере — без необходимости собирать данные из нескольких сервисов.</p></div>
+</div>
+</div></section>
+
+<section class="border-t border-slate-800/80 py-20">
+<div class="max-w-[1200px] mx-auto px-6">
+<h2 class="text-2xl md:text-3xl font-bold text-white mb-10" data-i18n="trade_work_title">Как работает анализ</h2>
+<div class="grid md:grid-cols-4 gap-4">
+<div class="border border-slate-800 bg-slate-900/30 rounded-2xl p-6"><h3 class="font-bold text-white mb-2" data-i18n="trade_step1_t">Сбор данных</h3><p class="text-sm text-slate-500 leading-relaxed" data-i18n="trade_step1_d">Бот получает актуальные рыночные и внешние данные по выбранному активу.</p></div>
+<div class="border border-slate-800 bg-slate-900/30 rounded-2xl p-6"><h3 class="font-bold text-white mb-2" data-i18n="trade_step2_t">Расчёт показателей</h3><p class="text-sm text-slate-500 leading-relaxed" data-i18n="trade_step2_d">Технический контур рассчитывает ключевые индикаторы, диапазоны и потенциальные уровни.</p></div>
+<div class="border border-slate-800 bg-slate-900/30 rounded-2xl p-6"><h3 class="font-bold text-white mb-2" data-i18n="trade_step3_t">AI-анализ</h3><p class="text-sm text-slate-500 leading-relaxed" data-i18n="trade_step3_d">Языковая модель сопоставляет технические показатели с рыночным и макроэкономическим контекстом.</p></div>
+<div class="border border-slate-800 bg-slate-900/30 rounded-2xl p-6"><h3 class="font-bold text-white mb-2" data-i18n="trade_step4_t">Готовый отчёт</h3><p class="text-sm text-slate-500 leading-relaxed" data-i18n="trade_step4_d">Пользователь получает структурированный разбор сценариев, факторов риска и текущей рыночной ситуации.</p></div>
+</div>
+
+
+<section class="border-t border-slate-800/80 py-20 text-center">
+<div class="max-w-3xl mx-auto px-6">
+<h2 class="text-2xl md:text-4xl font-bold text-white mb-5" data-i18n="trade_final_title">Получайте комплексный анализ рынка в одном месте</h2>
+<p class="text-slate-400 leading-relaxed mb-8" data-i18n="trade_final_desc">Запустите Trade AI в Telegram и изучайте рынок через сочетание математики, рыночных данных и искусственного интеллекта.</p>
+<a href="https://t.me/Dominuscryptobot" target="_blank" rel="noopener" class="inline-flex items-center justify-center bg-white text-slate-950 font-semibold px-7 py-3 rounded-xl hover:bg-slate-200" data-i18n="trade_cta">Открыть бота в Telegram →</a>
+</div></section>
+</main>
+<footer class="border-t border-slate-800 py-8 text-center text-sm text-slate-500">2026 Architect.Dev</footer>
+
+<script src="./secure-config.js"></script>
+<script src="./locales/ru.js"></script>
+<script src="./locales/uk.js"></script>
+<script src="./locales/en.js"></script>
+<script src="./locales/it.js"></script>
+<script src="./locales/fr.js"></script>
+<script src="./locales/es.js"></script>
+<script src="./locales/de.js"></script>
+<script src="./js/i18n.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+ const b=document.getElementById('lang-btn'),m=document.getElementById('lang-menu');
+ if(b&&m){b.addEventListener('click',e=>{e.stopPropagation();m.classList.toggle('hidden');m.classList.toggle('flex')});m.addEventListener('click',e=>{const x=e.target.closest('.lang-option');if(x){applyLang(x.dataset.lang,true);m.classList.add('hidden');m.classList.remove('flex')}});}
+ document.addEventListener('click',e=>{if(!document.getElementById('lang-switcher').contains(e.target)){m.classList.add('hidden');m.classList.remove('flex')}});
+ currentLang=(getLangFromURL()||localStorage.getItem('site_lang')||'ru').toLowerCase(); if(!window.LOCALES[currentLang])currentLang='ru'; applyLang(currentLang,false);
+});
+</script>
+</body></html>
