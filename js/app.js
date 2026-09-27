@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded',()=>{
     if(cdB&&!cdB.contains(e.target)&&cMenuB){cMenuB.classList.add('hidden');cMenuB.classList.remove('flex');}
   });
 
-  currentLang=(getLangFromURL()||localStorage.getItem("site_lang")||"ru").toLowerCase();
-  if(!window.LOCALES[currentLang]) currentLang="ru";
+  currentLang=(getLangFromURL()||localStorage.getItem("site_lang")||"en").toLowerCase();
+  if(!window.LOCALES[currentLang]) currentLang="en";
   applyLang(currentLang,false);
   applySecureConfig();
 
@@ -40,6 +40,6 @@ document.addEventListener('DOMContentLoaded',()=>{
   }
 });
 window.addEventListener('popstate',e=>{
-  const l=getLangFromURL()||(e.state&&e.state.lang)||'ru';
+  const l=getLangFromURL()||(e.state&&e.state.lang)||'en';
   applyLang(l,false);
 });

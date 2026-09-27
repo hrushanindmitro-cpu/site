@@ -16,8 +16,8 @@ function getLangFromURL(){
   }catch(e){}
   return null;
 }
-let currentLang=(getLangFromURL()||localStorage.getItem("site_lang")||"ru").toLowerCase();
-if(!window.LOCALES[currentLang]) currentLang="ru";
+let currentLang=(getLangFromURL()||localStorage.getItem("site_lang")||"en").toLowerCase();
+if(!window.LOCALES[currentLang]) currentLang="en";
 
 function updateLinks(lang){
   document.querySelectorAll('a[data-i18n="btn_discuss"], #btn-discuss-link').forEach(a=>{
@@ -27,6 +27,23 @@ function updateLinks(lang){
       a.href=url.pathname+url.search;
     }catch(e){ a.href=`brief.html?lang=${lang}`; }
   });
+  // Keep language on all internal navigation links.
+  document.querySelectorAll('a[href]').forEach(a=>{
+    const raw=a.getAttribute('href')||'';
+    if(!raw || raw.startsWith('#') || raw.startsWith('mailto:') || raw.startsWith('tel:') || raw.startsWith('javascript:') || raw.startsWith('http://') || raw.startsWith('https://')) return;
+    try{
+      const url=new URL(raw, window.location.href);
+      if(url.origin!==window.location.origin) return;
+      if(!/\.html(?:$|#|\?)/i.test(url.pathname) && !/index\.html$/i.test(url.pathname)) return;
+      url.searchParams.set('lang',lang);
+      a.setAttribute('href', url.pathname.split('/').pop()+url.search+(url.hash||''));
+    }catch(e){}
+  });
+  const homeBtn=document.getElementById('back-home');
+  if(homeBtn) homeBtn.href=`index.html?lang=${lang}`;
+  const projectsBtn=document.getElementById('back-to-projects');
+  if(projectsBtn) projectsBtn.href=`index.html?lang=${lang}#products`;
+
   const regBtn=document.getElementById('btn-registrar');
   if(regBtn){
     try{
@@ -62,8 +79,8 @@ function updateLinks(lang){
 }
 
 function applyLang(lang,push=true){
-  lang=(lang||'ru').toLowerCase();
-  if(!window.LOCALES[lang]) lang='ru';
+  lang=(lang||'en').toLowerCase();
+  if(!window.LOCALES[lang]) lang='en';
   currentLang=lang;
   const d=window.LOCALES[lang];
   if(!d) return;

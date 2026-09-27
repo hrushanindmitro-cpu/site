@@ -1,6 +1,7 @@
 const T = {
   ru: {
     brief_title:"Опросный лист на разработку",
+    brief_home:"← На главную",
     brief_sub:"Заполните 4 минуты, чтобы мы оценили архитектуру, срок и бюджет.",
     m1:"1. Контакт",
     m2:"2. Проект",
@@ -83,6 +84,7 @@ const T = {
   },
   uk: {
     brief_title:"Опитувальний лист на розробку",
+    brief_home:"← На головну",
     brief_sub:"Заповніть 4 хвилини для оцінки архітектури, терміну та бюджету.",
     m1:"1. Контакт",
     m2:"2. Проєкт",
@@ -165,6 +167,7 @@ const T = {
   },
   en: {
     brief_title:"Development Brief",
+    brief_home:"← Home",
     brief_sub:"Fill in 4 minutes to get architecture, timeline and budget estimate.",
     m1:"1. Contact",
     m2:"2. Project",
@@ -247,6 +250,7 @@ const T = {
   },
   it: {
     brief_title:"Brief di sviluppo",
+    brief_home:"← Home",
     brief_sub:"Compila 4 minuti per stima architettura, tempi e budget.",
     m1:"1. Contatto",
     m2:"2. Progetto",
@@ -329,6 +333,7 @@ const T = {
   },
   fr: {
     brief_title:"Brief développement",
+    brief_home:"← Accueil",
     brief_sub:"Remplissez 4 min pour estimation architecture, délai et budget.",
     m1:"1. Contact",
     m2:"2. Projet",
@@ -411,6 +416,7 @@ const T = {
   },
   es: {
     brief_title:"Brief de desarrollo",
+    brief_home:"← Inicio",
     brief_sub:"Completa 4 minutos para estimación de arquitectura, plazos y presupuesto.",
     m1:"1. Contacto",
     m2:"2. Proyecto",
@@ -493,6 +499,7 @@ const T = {
   },
   de: {
     brief_title:"Entwicklungs-Brief",
+    brief_home:"← Startseite",
     brief_sub:"4 Minuten ausfüllen für Architektur-, Zeit- und Budgetschätzung.",
     m1:"1. Kontakt",
     m2:"2. Projekt",
