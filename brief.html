@@ -27,7 +27,8 @@
 <button data-lang="fr" class="lang-option flex items-center gap-3 px-4 py-2.5 text-[13px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇫🇷</span> Français</button>
 <button data-lang="es" class="lang-option flex items-center gap-3 px-4 py-2.5 text-[13px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇪🇸</span> Español</button>
 <button data-lang="de" class="lang-option flex items-center gap-3 px-4 py-2.5 text-[13px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇩🇪</span> Deutsch</button>
-</div>
+</div></div>
+<a id="brief-back-home" href="index.html?lang=en" class="border border-slate-700 hover:border-slate-500 text-white font-semibold px-4 py-2 rounded-xl text-sm" data-i18n="brief_home">← Home</a>
 </div>
 </header>
 
@@ -165,6 +166,8 @@
 </div>
 
 <script src="./js/secure-config.js"></script>
+<footer class="border-t border-slate-800 py-8 text-center text-sm text-slate-500">2026 Architect.Dev</footer>
+
 <script src="./js/brief-i18n.js"></script>
 <script>
 // ✅ WORKING FUNCTIONS - PDF, Excel, Telegram (via Vercel API)
@@ -252,13 +255,13 @@ async function sendToTelegram(text, pdfBlob, xlsxBlob){
   return false;
 }
 
-function getLang(){try{const u=new URL(window.location.href);let l=u.searchParams.get('lang');if(l){l=l.toLowerCase(); if((typeof T!=='undefined'&&T[l])|| (window.LOCALES&&window.LOCALES[l])) return l;}}catch(e){}const stored=(localStorage.getItem('site_lang')||'ru').toLowerCase(); return stored;}
+function getLang(){try{const u=new URL(window.location.href);let l=u.searchParams.get('lang');if(l){l=l.toLowerCase(); if((typeof T!=='undefined'&&T[l])|| (window.LOCALES&&window.LOCALES[l])) return l;}}catch(e){}const stored=(localStorage.getItem('site_lang')||'en').toLowerCase(); return stored;}
 let currentLang=getLang();
-if(!T[currentLang]) currentLang='ru';
+if(!T[currentLang]) currentLang='en';
 
 function applyLang(lang){
-  lang=(lang||'ru').toLowerCase();
-  if(!T[lang]) lang='ru';
+  lang=(lang||'en').toLowerCase();
+  if(!T[lang]) lang='en';
   currentLang=lang;
   localStorage.setItem('site_lang',lang);
   const d=T[lang];
@@ -277,6 +280,7 @@ function applyLang(lang){
 
 document.addEventListener('DOMContentLoaded',()=>{
   applyLang(currentLang);
+  const briefHome=document.getElementById('brief-back-home'); if(briefHome) briefHome.href=`index.html?lang=${currentLang}`;
   const bLangBtn=document.getElementById('brief-lang-btn');
   const bLangMenu=document.getElementById('brief-lang-menu');
   if(bLangBtn&&bLangMenu){
@@ -289,6 +293,7 @@ document.addEventListener('DOMContentLoaded',()=>{
       const btn=e.target.closest('.lang-option');
       if(!btn) return;
       applyLang(btn.dataset.lang);
+      const briefHome=document.getElementById('brief-back-home'); if(briefHome) briefHome.href=`index.html?lang=${currentLang}`;
       bLangMenu.classList.add('hidden');
       bLangMenu.classList.remove('flex');
     });
