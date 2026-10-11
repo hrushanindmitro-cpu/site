@@ -175,6 +175,16 @@ const TRANSLATION_EN = {
   "trade_final_title": "Get comprehensive market analysis in one place",
   "trade_final_desc": "Launch Trade AI in Telegram and explore the market through a combination of mathematics, market data and artificial intelligence.",
   "trade_back": "← Back to projects"
+,
+  "p5_title": "DevBoard",
+  "p5_desc": "A single control center for multiple projects: track stages, monitor service status and keep essential product information in one workspace.",
+  "p5_details": "Explore DevBoard →",
+  "p6_title": "DOC-AI — Corporate Knowledge Base",
+  "p6_desc": "Turn scattered documents into an organized corporate knowledge base with semantic search, connected materials and AI-assisted document understanding.",
+  "p6_details": "Explore DOC-AI →",
+  "trade_flow": "Technical analysis → Market context → AI synthesis",
+  "trade_tg_note": "Market analysis inside the messenger.",
+  "reg_per_month": "/mo",
 };
 
 if (typeof window !== 'undefined') { window.LOCALES = window.LOCALES || {}; window.LOCALES['en'] = TRANSLATION_EN; }

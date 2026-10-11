@@ -175,6 +175,16 @@ const TRANSLATION_DE = {
   "trade_final_title": "Komplexe Marktanalyse an einem Ort",
   "trade_final_desc": "Starte Trade AI in Telegram und verbinde Mathematik, Marktdaten und künstliche Intelligenz.",
   "trade_back": "← Zurück zu Projekten"
+,
+  "p5_title": "DevBoard",
+  "p5_desc": "Eine zentrale Steuerungsoberfläche für mehrere Projekte: Fortschritt, Dienststatus und wichtige Produktinformationen an einem Ort.",
+  "p5_details": "DevBoard entdecken →",
+  "p6_title": "DOC-AI — Unternehmenswissensdatenbank",
+  "p6_desc": "Verwandeln Sie verstreute Dokumente in eine strukturierte Wissensdatenbank mit semantischer Suche, Dokumentverknüpfungen und KI-Unterstützung.",
+  "p6_details": "DOC-AI entdecken →",
+  "trade_flow": "Technische Analyse → Marktkontext → KI-Synthese",
+  "trade_tg_note": "Marktanalyse direkt im Messenger.",
+  "reg_per_month": "/Monat",
 };
 
 if (typeof window !== 'undefined') { window.LOCALES = window.LOCALES || {}; window.LOCALES['de'] = TRANSLATION_DE; }
