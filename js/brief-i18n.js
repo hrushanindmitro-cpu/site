@@ -1,7 +1,6 @@
 const T = {
   ru: {
     brief_title:"Опросный лист на разработку",
-    brief_home:"← На главную",
     brief_sub:"Заполните 4 минуты, чтобы мы оценили архитектуру, срок и бюджет.",
     m1:"1. Контакт",
     m2:"2. Проект",
@@ -79,12 +78,12 @@ const T = {
     opt_budget_need:"Нужна оценка",
     sending:"Отправляю...",
     sent:"✅ Отправлено! Получил в Telegram и на почту. Отвечу в течение 24 часа.",
+    sent_note:"(PDF/Excel скачаны, email открыт. Telegram заработает после заливки на Vercel)",
     error:"❌ Ошибка.",
     val_required:"Пожалуйста, заполните это поле"
   },
   uk: {
     brief_title:"Опитувальний лист на розробку",
-    brief_home:"← На головну",
     brief_sub:"Заповніть 4 хвилини для оцінки архітектури, терміну та бюджету.",
     m1:"1. Контакт",
     m2:"2. Проєкт",
@@ -162,12 +161,12 @@ const T = {
     opt_budget_need:"Потрібна оцінка",
     sending:"Надсилаю...",
     sent:"✅ Надіслано!",
+    sent_note:"(PDF/Excel завантажено, email відкрито. Telegram запрацює після розгортання на Vercel)",
     error:"❌ Помилка.",
     val_required:"Будь ласка, заповніть це поле"
   },
   en: {
     brief_title:"Development Brief",
-    brief_home:"← Home",
     brief_sub:"Fill in 4 minutes to get architecture, timeline and budget estimate.",
     m1:"1. Contact",
     m2:"2. Project",
@@ -245,12 +244,12 @@ const T = {
     opt_budget_need:"Need estimate",
     sending:"Sending...",
     sent:"✅ Sent! Received in Telegram and email.",
+    sent_note:"(PDF/Excel downloaded, email opened. Telegram will work once the site is deployed on Vercel)",
     error:"❌ Error.",
     val_required:"Please fill out this field"
   },
   it: {
     brief_title:"Brief di sviluppo",
-    brief_home:"← Home",
     brief_sub:"Compila 4 minuti per stima architettura, tempi e budget.",
     m1:"1. Contatto",
     m2:"2. Progetto",
@@ -328,12 +327,12 @@ const T = {
     opt_budget_need:"Serve stima",
     sending:"Invio...",
     sent:"✅ Inviato!",
+    sent_note:"(PDF/Excel scaricati, email aperta. Telegram funzionerà dopo il deploy su Vercel)",
     error:"❌ Errore.",
     val_required:"Compila questo campo"
   },
   fr: {
     brief_title:"Brief développement",
-    brief_home:"← Accueil",
     brief_sub:"Remplissez 4 min pour estimation architecture, délai et budget.",
     m1:"1. Contact",
     m2:"2. Projet",
@@ -411,12 +410,12 @@ const T = {
     opt_budget_need:"Besoin d'estimation",
     sending:"Envoi...",
     sent:"✅ Envoyé!",
+    sent_note:"(PDF/Excel téléchargés, e-mail ouvert. Telegram fonctionnera après le déploiement sur Vercel)",
     error:"❌ Erreur.",
     val_required:"Veuillez remplir ce champ"
   },
   es: {
     brief_title:"Brief de desarrollo",
-    brief_home:"← Inicio",
     brief_sub:"Completa 4 minutos para estimación de arquitectura, plazos y presupuesto.",
     m1:"1. Contacto",
     m2:"2. Proyecto",
@@ -494,12 +493,12 @@ const T = {
     opt_budget_need:"Necesito estimación",
     sending:"Enviando...",
     sent:"✅ ¡Enviado!",
+    sent_note:"(PDF/Excel descargados, correo abierto. Telegram funcionará tras el despliegue en Vercel)",
     error:"❌ Error.",
     val_required:"Completa este campo"
   },
   de: {
     brief_title:"Entwicklungs-Brief",
-    brief_home:"← Startseite",
     brief_sub:"4 Minuten ausfüllen für Architektur-, Zeit- und Budgetschätzung.",
     m1:"1. Kontakt",
     m2:"2. Projekt",
@@ -577,6 +576,7 @@ const T = {
     opt_budget_need:"Schätzung nötig",
     sending:"Sende...",
     sent:"✅ Gesendet!",
+    sent_note:"(PDF/Excel heruntergeladen, E-Mail geöffnet. Telegram funktioniert nach dem Deployment auf Vercel)",
     error:"❌ Fehler.",
     val_required:"Bitte füllen Sie dieses Feld aus"
   }

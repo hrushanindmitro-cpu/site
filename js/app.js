@@ -2,8 +2,6 @@
 document.addEventListener('DOMContentLoaded',()=>{
   const langBtn=document.getElementById('lang-btn');
   const langMenu=document.getElementById('lang-menu');
-  const cBtn=document.getElementById('contact-btn');
-  const cMenu=document.getElementById('contact-menu');
   const cBtnB=document.getElementById('contact-btn-bottom');
   const cMenuB=document.getElementById('contact-menu-bottom');
 
@@ -16,12 +14,10 @@ document.addEventListener('DOMContentLoaded',()=>{
       langMenu.classList.add('hidden');langMenu.classList.remove('flex');
     });
   }
-  if(cBtn&&cMenu){cBtn.addEventListener('click',e=>{e.stopPropagation();cMenu.classList.toggle('hidden');cMenu.classList.toggle('flex'); if(cMenuB){cMenuB.classList.add('hidden');cMenuB.classList.remove('flex');}});}
-  if(cBtnB&&cMenuB){cBtnB.addEventListener('click',e=>{e.stopPropagation();cMenuB.classList.toggle('hidden');cMenuB.classList.toggle('flex'); if(cMenu){cMenu.classList.add('hidden');cMenu.classList.remove('flex');}});}
+  if(cBtnB&&cMenuB){cBtnB.addEventListener('click',e=>{e.stopPropagation();cMenuB.classList.toggle('hidden');cMenuB.classList.toggle('flex'); if(window.SiteHeader){SiteHeader.closeContact();}});}
   document.addEventListener('click',e=>{
     if(!document.getElementById('lang-switcher').contains(e.target)){langMenu.classList.add('hidden');langMenu.classList.remove('flex');}
-    const cd=document.getElementById('contact-dropdown-container'); const cdB=document.getElementById('contact-dropdown-container-bottom');
-    if(cd&&!cd.contains(e.target)&&cMenu){cMenu.classList.add('hidden');cMenu.classList.remove('flex');}
+    const cdB=document.getElementById('contact-dropdown-container-bottom');
     if(cdB&&!cdB.contains(e.target)&&cMenuB){cMenuB.classList.add('hidden');cMenuB.classList.remove('flex');}
   });
 
