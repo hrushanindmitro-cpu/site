@@ -16,22 +16,29 @@
 <link rel="alternate" hreflang="x-default" href="/?lang=en">
 <meta id="meta-description" name="description" content="Разработка масштабируемых SaaS и Web3 решений">
 <style>.lang-active{background:#1e293b!important}.flag{font-size:18px;line-height:1}</style>
+<link rel="stylesheet" href="./css/site-header.css">
 </head>
 <body class="min-h-screen bg-[#0F172A] text-slate-200 selection:bg-cyan-500 selection:text-white">
 
-<header class="sticky top-0 z-50 bg-[#0F172A]/80 backdrop-blur-md border-b border-slate-800">
-<div class="max-w-[1200px] mx-auto px-6 h-[64px] flex items-center justify-between gap-4">
-<div class="font-bold text-[18px] tracking-tight text-white flex items-center gap-2 shrink-0"><span class="text-cyan-400">&lt;/&gt;</span> Architect.Dev</div>
+<header id="site-header" class="sticky top-0 z-50 bg-[#0F172A]/80 backdrop-blur-md border-b border-slate-800">
+<div class="max-w-[1200px] mx-auto px-4 sm:px-6 h-[64px] flex items-center justify-between gap-2 sm:gap-4">
+<a href="index.html" id="logo-link" data-site-home class="flex items-center gap-2.5 shrink-0 font-bold text-[16px] sm:text-[18px] tracking-tight text-white" aria-label="Architect.Dev">
+<img src="img/logo.png" alt="" width="36" height="33" class="h-9 w-auto"><span class="max-[359px]:hidden">Architect.Dev</span>
+</a>
 <nav class="hidden md:flex items-center gap-6 text-[14px] text-slate-400">
 <a href="#products" class="hover:text-white" data-i18n="nav_projects">Проекты</a>
 <a href="#philosophy" class="hover:text-white" data-i18n="nav_approach">Подход</a>
 <a href="#articles" class="hover:text-white" data-i18n="nav_articles">Статьи</a>
 <a href="#stack" class="hover:text-white" data-i18n="nav_stack">Технологии</a>
 </nav>
-<div class="flex items-center gap-3">
+<div class="flex items-center gap-2 sm:gap-3">
+<a href="index.html" id="site-home-btn" data-site-home data-site-home-btn class="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-slate-700 hover:border-slate-500 text-white text-[13px] sm:text-[14px] font-medium" data-site-aria="nav_home" aria-label="Home">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1V10"/></svg>
+<span class="hidden sm:inline" data-site-i18n="nav_home">Главная</span>
+</a>
 <div id="lang-switcher" class="relative">
 <button id="lang-btn" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-[13px] text-white">
-<span id="lang-current-flag" class="flag">🇬🇧</span><span id="lang-current-code" class="hidden sm:inline font-medium">EN</span>
+<span id="lang-current-flag" class="flag">🇷🇺</span><span id="lang-current-code" class="hidden sm:inline font-medium">RU</span>
 <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
 </button>
 <div id="lang-menu" class="hidden absolute right-0 top-[110%] w-[200px] bg-slate-900 border border-slate-700 rounded-xl shadow-2xl flex-col py-1 z-[60]">
@@ -44,15 +51,15 @@
 <button data-lang="de" class="lang-option flex items-center gap-3 px-4 py-2.5 text-[13px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇩🇪</span> Deutsch</button>
 </div>
 </div>
-<div id="contact-dropdown-container" class="relative">
-<button id="contact-btn" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-medium px-4 py-2 rounded-lg text-[14px] shadow-lg shadow-cyan-500/20" data-i18n="btn_contact">Связаться</button>
-<div id="contact-menu" class="hidden absolute right-0 top-[120%] w-[220px] bg-slate-900 border border-slate-700 rounded-xl shadow-2xl flex-col overflow-hidden z-50 text-left">
-<a href="https://t.me/" target="_blank" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white border-b border-slate-800/50">Telegram</a>
-<a href="https://instagram.com/" target="_blank" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white border-b border-slate-800/50">Instagram</a>
-<a href="https://facebook.com/" target="_blank" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white border-b border-slate-800/50">Facebook</a>
-<a href="https://github.com/" target="_blank" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white border-b border-slate-800/50">GitHub</a>
-<a href="https://linkedin.com/" target="_blank" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white border-b border-slate-800/50">LinkedIn</a>
-<a href="mailto:" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white">Email</a>
+<div id="site-contact" class="relative">
+<button id="site-contact-btn" aria-expanded="false" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-medium px-3 sm:px-4 py-2 rounded-lg text-[13px] sm:text-[14px] shadow-lg shadow-cyan-500/20" data-site-i18n="btn_contact">Связаться</button>
+<div id="site-contact-menu" class="hidden absolute right-0 top-[120%] w-[220px] bg-slate-900 border border-slate-700 rounded-xl shadow-2xl flex-col overflow-hidden z-50 text-left">
+<a data-contact="telegram" href="https://t.me/" target="_blank" rel="noopener" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white border-b border-slate-800/50">Telegram</a>
+<a data-contact="instagram" href="https://instagram.com/" target="_blank" rel="noopener" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white border-b border-slate-800/50">Instagram</a>
+<a data-contact="facebook" href="https://facebook.com/" target="_blank" rel="noopener" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white border-b border-slate-800/50">Facebook</a>
+<a data-contact="github" href="https://github.com/" target="_blank" rel="noopener" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white border-b border-slate-800/50">GitHub</a>
+<a data-contact="linkedin" href="https://linkedin.com/" target="_blank" rel="noopener" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white border-b border-slate-800/50">LinkedIn</a>
+<a data-contact="email" href="mailto:" target="_blank" rel="noopener" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white">Email</a>
 </div>
 </div>
 </div>
@@ -87,7 +94,7 @@
 <h3 class="text-xl font-bold text-white mb-3" data-i18n="p2_title">Trade AI</h3>
 <p class="text-slate-400 mb-6 leading-relaxed" data-i18n="p2_desc">Интеллектуальный анализатор торговых паттернов и блокчейн-транзакций. Использует ИИ как архитектурный ускоритель для поиска аномалий.</p>
 <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300 mb-6"><span class="bg-slate-800 px-3 py-1 rounded-md">AI Models</span><span class="bg-slate-800 px-3 py-1 rounded-md">Web3</span><span class="bg-slate-800 px-3 py-1 rounded-md">Node.js</span><span class="bg-slate-800 px-3 py-1 rounded-md">MongoDB</span><span class="bg-slate-800 px-3 py-1 rounded-md">Binance Futures API</span></div>
-<a id="btn-trade-ai" data-i18n="p2_details" href="./trade-ai.html?lang=ru" class="mt-auto inline-flex items-center justify-center bg-white text-slate-950 font-semibold px-5 py-2.5 rounded-xl hover:bg-slate-200 transition text-[14px]">Подробнее о боте →</a>
+<a id="btn-trade-ai" data-i18n="p2_details" href="./trade-ai.html?lang=en" class="mt-auto inline-flex items-center justify-center bg-white text-slate-950 font-semibold px-5 py-2.5 rounded-xl hover:bg-slate-200 transition text-[14px]">Подробнее о боте →</a>
 </div>
 
 <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl flex flex-col">
@@ -104,6 +111,22 @@
 <p class="text-slate-400 mb-6 leading-relaxed" data-i18n="p4_desc">Защищённое локальное веб-приложение для автоматизации подготовки кадровой документации и снижения рутинных ошибок.</p>
 <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300 mb-6"><span class="bg-slate-800 px-3 py-1 rounded-md">Python</span><span class="bg-slate-800 px-3 py-1 rounded-md">Streamlit</span></div>
 <a id="btn-hrdocflow" data-i18n="p4_details" href="./hr-docflow-local.html" class="mt-auto inline-flex items-center justify-center bg-white text-slate-950 font-semibold px-5 py-2.5 rounded-xl hover:bg-slate-200 transition text-[14px]">Подробнее о приложении</a>
+</div>
+
+<div class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl flex flex-col">
+<div class="text-cyan-400 font-mono text-sm mb-3">SaaS / Project Operations</div>
+<h3 class="text-xl font-bold text-white mb-3" data-i18n="p5_title">DevBoard</h3>
+<p class="text-slate-400 mb-6 leading-relaxed" data-i18n="p5_desc">Единый центр управления несколькими проектами: контроль этапов, состояние сервисов и ключевая информация в одном рабочем пространстве.</p>
+<div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300 mb-6"><span class="bg-slate-800 px-3 py-1 rounded-md">Project Overview</span><span class="bg-slate-800 px-3 py-1 rounded-md">Service Status</span><span class="bg-slate-800 px-3 py-1 rounded-md">Offline-ready</span></div>
+<a id="btn-devboard" data-i18n="p5_details" href="./devboard.html" class="mt-auto inline-flex items-center justify-center bg-white text-slate-950 font-semibold px-5 py-2.5 rounded-xl hover:bg-slate-200 transition text-[14px]">Подробнее о платформе →</a>
+</div>
+
+<div class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl flex flex-col">
+<div class="text-blue-400 font-mono text-sm mb-3">AI / Document Intelligence</div>
+<h3 class="text-xl font-bold text-white mb-3" data-i18n="p6_title">DOC-AI — Корпоративная база знаний</h3>
+<p class="text-slate-400 mb-6 leading-relaxed" data-i18n="p6_desc">Превращает разрозненные документы в упорядоченную корпоративную базу знаний с поиском по смыслу, связями между материалами и AI-помощью.</p>
+<div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300 mb-6"><span class="bg-slate-800 px-3 py-1 rounded-md">Document Intelligence</span><span class="bg-slate-800 px-3 py-1 rounded-md">Semantic Search</span><span class="bg-slate-800 px-3 py-1 rounded-md">Human Approval</span></div>
+<a id="btn-docai" data-i18n="p6_details" href="./doc-ai.html" class="mt-auto inline-flex items-center justify-center bg-white text-slate-950 font-semibold px-5 py-2.5 rounded-xl hover:bg-slate-200 transition text-[14px]">Подробнее о приложении →</a>
 </div>
 
 </div>
@@ -167,7 +190,7 @@
 </section>
 </main>
 
-<footer class="border-t border-slate-800 py-8 text-center text-sm text-slate-500">2026 Architect.Dev</footer>
+<footer id="site-footer" class="border-t border-slate-800 py-8 px-6 text-center text-sm text-slate-500"><p data-site-i18n="footer">© 2026 Dmytro SaaS Web3 Architect. Все права защищены.</p></footer>
 <script src="./secure-config.js"></script>
 <script src="./locales/ru.js"></script>
 <script src="./locales/uk.js"></script>
@@ -178,5 +201,6 @@
 <script src="./locales/de.js"></script>
 <script src="./js/i18n.js"></script>
 <script src="./js/app.js"></script>
+<script src="./js/site-header.js"></script>
 </body>
 </html>

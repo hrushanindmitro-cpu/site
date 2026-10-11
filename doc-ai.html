@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Architect.Dev product overview">
+<script src="https://cdn.tailwindcss.com"></script><script>tailwind.config={theme:{extend:{colors:{dark:'#0F172A'}}}}</script>
+<style>.lang-active{background:#1e293b!important}.flag{font-size:18px;line-height:1}.product-glow{box-shadow:0 0 90px rgba(34,211,238,.08)}.feature-card{background:rgba(15,23,42,.62);border:1px solid #1e293b;border-radius:1rem;padding:1.5rem}</style>
+<link rel="stylesheet" href="./css/site-header.css">
+</head>
+<body data-product="doc" class="min-h-screen bg-[#0F172A] text-slate-200 selection:bg-cyan-500 selection:text-white">
+<header id="site-header" class="sticky top-0 z-50 bg-[#0F172A]/80 backdrop-blur-md border-b border-slate-800">
+<div class="max-w-[1200px] mx-auto px-4 sm:px-6 h-[64px] flex items-center justify-between gap-2 sm:gap-4">
+<a href="index.html" id="logo-link" data-site-home class="flex items-center gap-2.5 shrink-0 font-bold text-[16px] sm:text-[18px] tracking-tight text-white" aria-label="Architect.Dev">
+<img src="img/logo.png" alt="" width="36" height="33" class="h-9 w-auto"><span class="max-[359px]:hidden">Architect.Dev</span>
+</a>
+<div class="flex items-center gap-2 sm:gap-3">
+<a href="index.html" id="site-home-btn" data-site-home data-site-home-btn class="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-slate-700 hover:border-slate-500 text-white text-[13px] sm:text-[14px] font-medium" data-site-aria="nav_home" aria-label="Home">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1V10"/></svg>
+<span class="hidden sm:inline" data-site-i18n="nav_home">Главная</span>
+</a>
+<div id="lang-switcher" class="relative">
+<button id="lang-btn" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-[13px] text-white">
+<span id="lang-current-flag" class="flag">🇷🇺</span><span id="lang-current-code" class="hidden sm:inline font-medium">RU</span>
+<svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+</button>
+<div id="lang-menu" class="hidden absolute right-0 top-[110%] w-[200px] bg-slate-900 border border-slate-700 rounded-xl shadow-2xl flex-col py-1 z-[60]">
+<button data-lang="ru" class="lang-option flex items-center gap-3 px-4 py-2.5 text-[13px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇷🇺</span> Русский</button>
+<button data-lang="uk" class="lang-option flex items-center gap-3 px-4 py-2.5 text-[13px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇺🇦</span> Українська</button>
+<button data-lang="en" class="lang-option flex items-center gap-3 px-4 py-2.5 text-[13px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇬🇧</span> English</button>
+<button data-lang="it" class="lang-option flex items-center gap-3 px-4 py-2.5 text-[13px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇮🇹</span> Italiano</button>
+<button data-lang="fr" class="lang-option flex items-center gap-3 px-4 py-2.5 text-[13px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇫🇷</span> Français</button>
+<button data-lang="es" class="lang-option flex items-center gap-3 px-4 py-2.5 text-[13px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇪🇸</span> Español</button>
+<button data-lang="de" class="lang-option flex items-center gap-3 px-4 py-2.5 text-[13px] hover:bg-slate-800 text-white w-full text-left"><span class="flag">🇩🇪</span> Deutsch</button>
+</div>
+</div>
+<div id="site-contact" class="relative">
+<button id="site-contact-btn" aria-expanded="false" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-medium px-3 sm:px-4 py-2 rounded-lg text-[13px] sm:text-[14px] shadow-lg shadow-cyan-500/20" data-site-i18n="btn_contact">Связаться</button>
+<div id="site-contact-menu" class="hidden absolute right-0 top-[120%] w-[220px] bg-slate-900 border border-slate-700 rounded-xl shadow-2xl flex-col overflow-hidden z-50 text-left">
+<a data-contact="telegram" href="https://t.me/" target="_blank" rel="noopener" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white border-b border-slate-800/50">Telegram</a>
+<a data-contact="instagram" href="https://instagram.com/" target="_blank" rel="noopener" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white border-b border-slate-800/50">Instagram</a>
+<a data-contact="facebook" href="https://facebook.com/" target="_blank" rel="noopener" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white border-b border-slate-800/50">Facebook</a>
+<a data-contact="github" href="https://github.com/" target="_blank" rel="noopener" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white border-b border-slate-800/50">GitHub</a>
+<a data-contact="linkedin" href="https://linkedin.com/" target="_blank" rel="noopener" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white border-b border-slate-800/50">LinkedIn</a>
+<a data-contact="email" href="mailto:" target="_blank" rel="noopener" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white">Email</a>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-6">
+<section class="py-16 md:py-24 grid lg:grid-cols-[1.1fr_.9fr] gap-12 items-center"><div><div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-[12px] font-medium mb-6"><span class="w-2 h-2 rounded-full bg-cyan-400"></span><span data-product-i18n="doc_badge"></span></div><h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-5 leading-tight" data-product-i18n="doc_title"></h1><p class="text-xl md:text-2xl text-cyan-300 font-semibold mb-5" data-product-i18n="doc_subtitle"></p><p class="text-lg text-slate-400 leading-relaxed mb-8" data-product-i18n="doc_hero"></p><div class="flex flex-wrap gap-3"><a href="./brief.html?lang=en" data-product-link class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold px-6 py-3 rounded-xl" data-product-i18n="doc_cta"></a><a href="./index.html?lang=en#products" data-product-link class="border border-slate-700 hover:border-slate-500 text-white font-semibold px-6 py-3 rounded-xl" data-product-i18n="back_products"></a></div></div><div class="relative"><div class="absolute inset-0 rounded-full bg-cyan-500/10 blur-3xl"></div><div class="flex items-center justify-between mb-6"><div class="flex gap-2"></section>
+<section class="py-16 border-t border-slate-800/80"><div class="max-w-3xl mb-10"><h2 class="text-2xl md:text-3xl font-bold text-white mb-4" data-product-i18n="doc_overview_title"></h2><p class="text-slate-400 leading-relaxed" data-product-i18n="doc_overview"></p></div><div class="grid md:grid-cols-2 gap-5"><article class="feature-card"><div class="text-cyan-400 text-2xl mb-4"></div><h3 class="text-lg font-bold text-white mb-3" data-product-i18n="doc_f1t"></h3><p class="text-slate-400 leading-relaxed" data-product-i18n="doc_f1"></p></article><article class="feature-card"><div class="text-cyan-400 text-2xl mb-4"></div><h3 class="text-lg font-bold text-white mb-3" data-product-i18n="doc_f2t"></h3><p class="text-slate-400 leading-relaxed" data-product-i18n="doc_f2"></p></article><article class="feature-card"><div class="text-cyan-400 text-2xl mb-4"></div><h3 class="text-lg font-bold text-white mb-3" data-product-i18n="doc_f3t"></h3><p class="text-slate-400 leading-relaxed" data-product-i18n="doc_f3"></p></article><article class="feature-card"><div class="text-cyan-400 text-2xl mb-4"></div><h3 class="text-lg font-bold text-white mb-3" data-product-i18n="doc_f4t"></h3><p class="text-slate-400 leading-relaxed" data-product-i18n="doc_f4"></p></article><article class="feature-card"><div class="text-cyan-400 text-2xl mb-4"></div><h3 class="text-lg font-bold text-white mb-3" data-product-i18n="doc_f5t"></h3><p class="text-slate-400 leading-relaxed" data-product-i18n="doc_f5"></p></article><article class="feature-card"><div class="text-cyan-400 text-2xl mb-4"></div><h3 class="text-lg font-bold text-white mb-3" data-product-i18n="doc_f6t"></h3><p class="text-slate-400 leading-relaxed" data-product-i18n="doc_f6"></p></article><article class="feature-card"><div class="text-cyan-400 text-2xl mb-4"></div><h3 class="text-lg font-bold text-white mb-3" data-product-i18n="doc_f7t"></h3><p class="text-slate-400 leading-relaxed" data-product-i18n="doc_f7"></p></article></div></section>
+<section class="py-16 border-t border-slate-800/80 grid md:grid-cols-2 gap-8"><div class="feature-card"><div class="text-cyan-400 text-sm font-mono mb-3"><span data-product-i18n="section_control">CONTROL</span></div><h2 class="text-xl font-bold text-white mb-3" data-product-i18n="doc_control_title"></h2><p class="text-slate-400 leading-relaxed" data-product-i18n="doc_control"></p></div><div class="feature-card"><div class="text-cyan-400 text-sm font-mono mb-3"><span data-product-i18n="section_context">CONTEXT</span></div><h2 class="text-xl font-bold text-white mb-3" data-product-i18n="doc_audience_title"></h2><p class="text-slate-400 leading-relaxed" data-product-i18n="doc_audience"></p></div></section>
+<section class="py-16 border-t border-slate-800/80 text-center"><h2 class="text-2xl md:text-4xl font-bold text-white mb-5" data-product-i18n="doc_final_title"></h2><p class="text-slate-400 max-w-3xl mx-auto mb-8 leading-relaxed" data-product-i18n="doc_final"></p><a href="./brief.html?lang=en" data-product-link class="inline-flex bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold px-7 py-3 rounded-xl" data-product-i18n="doc_cta"></a></section>
+</main><footer id="site-footer" class="border-t border-slate-800 py-8 px-6 text-center text-sm text-slate-500"><p data-site-i18n="footer">© 2026 Dmytro SaaS Web3 Architect. Все права защищены.</p></footer><script src="./js/new-products-i18n.js"></script><script src="./secure-config.js"></script>
+<script src="./js/site-header.js"></script>
+</body></html>
