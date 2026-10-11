@@ -1,0 +1,4 @@
+/* Общие стили шапки и футера (одинаковые на всех страницах) */
+.flag{font-size:18px;line-height:1}
+.lang-active{background:#1e293b!important}
+.site-home-active{border-color:rgba(34,211,238,.55)!important;color:#22d3ee!important}
